@@ -4,17 +4,18 @@ from PO.LoginRegisterPage.RegisterPage import RegisterPage
 from libs.ShareModules import InsertLog
 from libs.ShareModules import Getdata
 from BeautifulReport import BeautifulReport
+from PO.BasePage import Base
 
 '''读取测试数据'''
 brand_name = Getdata('Registe_tc', 'brand_name')
 nation = Getdata('Registe_tc', 'nation')
-phone_number = Getdata('Registe_tc', 'phone_number')
 loginpwd = Getdata('Registe_tc', 'loginpwd')
 name = Getdata('Registe_tc', 'name')
 surname = Getdata('Registe_tc', 'surname')
 imei = Getdata('Registe_tc', 'imei')
-email = Getdata('Registe_tc', 'email')
 paymentpwd = Getdata('Registe_tc', 'paymentpwd')
+email = Base.create_email()
+phone_number = Base.create_mobile()
 
 class RegisteTest(unittest.TestCase):
     """测试 注册页面"""
@@ -40,7 +41,7 @@ class RegisteTest(unittest.TestCase):
         """
         try:
             # self.a.click_registration()
-            self.a.open_url('https://buy-fat-2.pundix.com/#/register/?path=test')
+            self.a.open_url('https://buy-fat-1.pundix.com/#/register/?path=test')
             self.a.select_business_category()  # 选择经营品类，默认选择 Government
             self.a.set_brand_name(brand_name)  # 输入品牌名称
             self.a.input_login_password(loginpwd, name, surname)  # 输入登陆密码、名、姓

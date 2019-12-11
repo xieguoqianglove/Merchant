@@ -1,0 +1,24 @@
+2019-12-11 14:28:55 => D_StaffList_tc.py:test_009_Add_Account - DEBUG - Message: unknown error: Element <li data-v-f3e19b62="" role="menuitem" tabindex="0" class="el-menu-item" style="border-bottom-color: transparent;">...</li> is not clickable at point (286, 28). Other element would receive the click: <div data-v-756d4580="" class="el-dialog__wrapper" style="z-index: 2004;">...</div>
+  (Session info: chrome=78.0.3904.108)
+  (Driver info: chromedriver=2.41.578706 (5f725d1b4f0a4acbf5259df887244095596231db),platform=Mac OS X 10.14.5 x86_64)
+
+2019-12-11 14:29:32 => D_StaffList_tc.py:test_009_Add_Account - DEBUG - Message: invalid selector: An invalid or illegal selector was specified
+  (Session info: chrome=78.0.3904.108)
+  (Driver info: chromedriver=2.41.578706 (5f725d1b4f0a4acbf5259df887244095596231db),platform=Mac OS X 10.14.5 x86_64)
+
+2019-12-11 14:30:25 => D_StaffList_tc.py:test_009_Add_Account - DEBUG - Message: invalid selector: An invalid or illegal selector was specified
+  (Session info: chrome=78.0.3904.108)
+  (Driver info: chromedriver=2.41.578706 (5f725d1b4f0a4acbf5259df887244095596231db),platform=Mac OS X 10.14.5 x86_64)
+
+2019-12-11 14:31:56 => D_StaffList_tc.py:test_009_Add_Account - DEBUG - Message: invalid selector: An invalid or illegal selector was specified
+  (Session info: chrome=78.0.3904.108)
+  (Driver info: chromedriver=2.41.578706 (5f725d1b4f0a4acbf5259df887244095596231db),platform=Mac OS X 10.14.5 x86_64)
+
+2019-12-11 14:33:05 => D_StaffList_tc.py:test_009_Add_Account - DEBUG - Message: invalid selector: An invalid or illegal selector was specified
+  (Session info: chrome=78.0.3904.108)
+  (Driver info: chromedriver=2.41.578706 (5f725d1b4f0a4acbf5259df887244095596231db),platform=Mac OS X 10.14.5 x86_64)
+
+2019-12-11 14:34:40 => D_StaffList_tc.py:test_009_Add_Account - DEBUG - Message: 
+
+2019-12-11 14:36:54 => D_StaffList_tc.py:test_009_Add_Account - DEBUG - Message: 
+

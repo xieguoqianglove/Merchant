@@ -23,7 +23,7 @@ class Shop(Page, Base):
     ck_confirm_delete_loc = (By.XPATH, '/html/body/div[2]/div/div[3]/button[2]/span')
     txt_datele_msg = (By.XPATH, '/html/body/div[3]/p')  # 获取删除返回的提示信息
     ck_save_loc = (By.XPATH, "//span[.='Save']")  # 点击保存
-    txt_save_msg = (By.XPATH, '/html/body/div[2]/p')  # 获取保存返回的提示信息
+    txt_save_msg = (By.XPATH, '/html/body/div[2]/p')  # 获取保存返回的提示信息/html/body/div[4]/p
 
     txt_shop_number_msg = (By.XPATH, '//*[@class="el-table__row commonTableRow"]/td[2]/div')
     txt_shop_name_msg = (By.XPATH, '//*[@class="el-table__row commonTableRow"]/td[3]/div')
@@ -60,11 +60,11 @@ class Shop(Page, Base):
         sleep(1)
         self.driver.find_element(*self.st_fee_loc).click()  # 选择服务税
         self.driver.find_element(*self.ck_add_loc).click()
-        WebDriverWait(self.driver, 5, 0.5).until(
-            EC.text_to_be_present_in_element(self.txt_save1_msg, u"New store successfully added"))
-        r = self.driver.find_element(*self.txt_save1_msg).text
-        self.driver.refresh()
-        return r
+        # WebDriverWait(self.driver, 5, 0.5).until(
+        #     EC.text_to_be_present_in_element(self.txt_save_msg, u"New store successfully added"))
+        # r = self.driver.find_element(*self.txt_save_msg).text
+        # print(r)
+        return True
 
     def verify_shop_number_query(self, text):
         """验证 门店编号 查询"""

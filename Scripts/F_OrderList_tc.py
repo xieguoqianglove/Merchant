@@ -7,7 +7,7 @@ from PO.OrderPage.OrderManagementList import OrderManagement
 from libs.ShareModules import Getdata
 from BeautifulReport import BeautifulReport
 '''读取测试数据'''
-shop_name = Getdata('OrderManagementList_tc', 'shop_name')
+shop_name = Getdata('ShopList_tc', 'shop_name')
 
 class OrderManagementTest(unittest.TestCase):
     """测试 订单--订单管理 页面"""
@@ -20,7 +20,6 @@ class OrderManagementTest(unittest.TestCase):
 
     @classmethod
     def tearDownClass(self):
-        sleep(40)  # 防止提示验证码发送过快
         self.c.close_broser()
 
     def OrderManagermentBusiness(self):

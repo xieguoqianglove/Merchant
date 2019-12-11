@@ -157,6 +157,18 @@ class Base:
 
 
     # -------------------------------随机生成数据部分,用于注册------------------------------- #
+    def create_mobile():
+        """
+        随机生成电话号码
+        :return:
+        """
+
+        num = '0123456789'
+        # code = ['+86137', '+86159', '+86188', '+86132']  # 中国
+        code = ['4120', '4123', '4124']  # 委内瑞拉
+        mobile = random.choice(code) + ''.join(random.choice(num) for i in range(6))  # 委内瑞拉
+        return mobile
+
     def create_email():
         """
         随机生成邮箱地址
