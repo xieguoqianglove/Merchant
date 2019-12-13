@@ -49,8 +49,7 @@ class OverviewAndCash(Page, Base):
         """获取  现金记录 文本"""
         WebDriverWait(self.driver, 10, 0.5).until(
             EC.text_to_be_present_in_element(self.txt_carh_history_msg, u"Cash history"))
-        r = self.driver.find_element(*self.txt_carh_history_msg).text
-        return r
+        return self.driver.find_element(*self.txt_carh_history_msg).text
 
     def verify_input_shop_query(self, text):
         """验证 输入方式的门店 查询"""
@@ -61,8 +60,7 @@ class OverviewAndCash(Page, Base):
         self.driver.find_element(*self.ck_search_loc).click()
         WebDriverWait(self.driver, 5, 0.5).until(
             EC.text_to_be_present_in_element(self.txt_store_msg, u'%s' % text))
-        r = self.driver.find_element(*self.txt_store_msg).text
-        return r
+        return self.driver.find_element(*self.txt_store_msg).text
 
     def verify_select_shop_query(self):
         """验证 选择方式的门店 查询"""
@@ -70,15 +68,13 @@ class OverviewAndCash(Page, Base):
         self.driver.find_element(*self.st_all_store_loc).click()
         self.driver.find_element(*self.ck_search_loc).click()
         sleep(1)
-        r = self.driver.find_element(*self.txt_store_msg).text
-        return r
+        return self.driver.find_element(*self.txt_store_msg).text
 
     def verify_reset_function(self, text):
         """验证 重置功能"""
         self.driver.find_element(*self.ipt_start_day_loc).send_keys(text)
         self.driver.find_element(*self.ck_reset_loc).click()
-        r = self.driver.find_element(*self.ipt_start_day_loc).text
-        return r
+        return self.driver.find_element(*self.ipt_start_day_loc).text
 
     def verify_day_query(self, text, text1):
         """验证 日期查询"""
@@ -87,5 +83,4 @@ class OverviewAndCash(Page, Base):
         self.driver.find_element(*self.ipt_end_day_loc).send_keys(text1)
         self.driver.find_element(*self.ck_search_loc).click()
         sleep(1)
-        r = self.driver.find_element(*self.txt_time_msg).text
-        return r
+        return self.driver.find_element(*self.txt_time_msg).text

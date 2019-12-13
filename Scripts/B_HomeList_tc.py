@@ -5,6 +5,7 @@ from libs.ShareBusiness import login_B
 from libs.ShareModules import InsertLog
 from PO.Pagetitle import PageTitle
 from PO.HomePage.HomeList import Home
+from BeautifulReport import BeautifulReport
 
 class HomeListTest(unittest.TestCase):
     """测试 首页 页面"""
@@ -27,8 +28,7 @@ class HomeListTest(unittest.TestCase):
             self.b.switch_to_HomePage()
             sleep(1)
             self.c.click_HomePage()
-            msg = self.c.get_Business_income_today_msg_txt()
-            self.assertEqual(msg, u"Today's income")
+            self.assertTrue(self.c.get_Business_income_today_msg())
         except (BaseException, AssertionError) as msg:  # BaseException所有异常的基类,AssertionError断言语句失败
             self.c.save_img('001_Home_fail')
             InsertLog().debug(msg)

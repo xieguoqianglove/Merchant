@@ -13,18 +13,17 @@ class Home(Page, Base):
 
     # 操作层
     def click_HomePage(self):
-         """点击首页"""
-         self.driver.find_element(*self.ck_Home_loc).click()
+        """点击首页"""
+        self.driver.find_element(*self.ck_Home_loc).click()
 
-    def get_Business_income_today_msg_txt(self):
-         # '''获取页面上'今日营业收入文本''''
+    def get_Business_income_today_msg(self):
+        """获取页面上今日营业收入文本"""
         WebDriverWait(self.driver, 10, 0.5).until(
             EC.text_to_be_present_in_element(self.txt_Business_income_today_msg_loc, u"Today's income"))
-        r = self.driver.find_element(*self.txt_Business_income_today_msg_loc).text
-        return r
+        return self.driver.find_element(*self.txt_Business_income_today_msg_loc).text
 
     # 业务层
     def HomePageBusiness(self):
         self.click_HomePage()
-        self.get_Business_income_today_msg_txt()
+        self.get_Business_income_today_msg()
 

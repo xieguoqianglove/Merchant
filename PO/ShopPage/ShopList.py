@@ -47,8 +47,7 @@ class Shop(Page, Base):
         """获取新增门店文本"""
         WebDriverWait(self.driver, 5, 0.5).until(
             EC.text_to_be_present_in_element(self.txt_add_store_loc, u"New store"))
-        r = self.driver.find_element(*self.txt_add_store_loc).text
-        return r
+        return self.driver.find_element(*self.txt_add_store_loc).text
 
     def add_shop_success(self, text, text1, text2):
         """新增门店流程"""
@@ -72,8 +71,7 @@ class Shop(Page, Base):
         self.driver.find_element(*self.ck_search_loc).click()
         WebDriverWait(self.driver, 5, 0.5).until(
             EC.text_to_be_present_in_element(self.txt_shop_number_msg, u'%s'% text))
-        r = self.driver.find_element(*self.txt_shop_number_msg).text
-        return r
+        return self.driver.find_element(*self.txt_shop_number_msg).text
 
     def verify_shop_name_query(self, text):
         """验证 门店名称 查询"""
@@ -81,8 +79,7 @@ class Shop(Page, Base):
         self.driver.find_element(*self.ck_search_loc).click()
         WebDriverWait(self.driver, 5, 0.5).until(
             EC.text_to_be_present_in_element(self.txt_shop_name_msg, u'%s'% text))
-        r = self.driver.find_element(*self.txt_shop_name_msg).text
-        return r
+        return self.driver.find_element(*self.txt_shop_name_msg).text
 
     def verify_telephone_query(self, text):
         """验证 电话 查询"""
@@ -90,8 +87,7 @@ class Shop(Page, Base):
         self.driver.find_element(*self.ck_search_loc).click()
         WebDriverWait(self.driver, 5, 0.5).until(
             EC.text_to_be_present_in_element(self.txt_telephone_msg, u'%s'% text))
-        r = self.driver.find_element(*self.txt_telephone_msg).text
-        return r
+        return self.driver.find_element(*self.txt_telephone_msg).text
 
     def verify_edit_function(self):
         """验证 编辑功能"""
@@ -123,5 +119,4 @@ class Shop(Page, Base):
         """验证 重置功能"""
         self.driver.find_element(*self.ipt_shop_name_loc).send_keys(text)
         self.driver.find_element(*self.ck_reset_loc).click()
-        r = self.driver.find_element(*self.ipt_shop_name_loc).text
-        return r
+        return self.driver.find_element(*self.ipt_shop_name_loc).text
