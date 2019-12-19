@@ -14,7 +14,7 @@ class RegisterPage(Page,Base):
     st_business_loc = (By.XPATH, '/html/body/div[3]/div[1]/div[1]/ul/li[11]/span')  # 选择Gifts and flowers类型
     ipt_brand_name_loc = (By.CSS_SELECTOR, 'input[placeholder="Please enter brand name"]')  # 输入品牌名称
     ck_nation_loc = (By.CSS_SELECTOR, 'input[placeholder="Country/Region"]')  # 点击选择国家
-    ipt_phone_number_loc = (By.CSS_SELECTOR, 'input.el-input__inner:nth-child(3)')  # 输入手机号码
+    ipt_phone_number_loc = (By.CSS_SELECTOR, 'input[placeholder="Please enter phone number"]')   # 输入手机号码
     ck_sendsms_loc = (By.XPATH, '//*[@id="app"]/section/div[2]/div/form/div[2]/div[2]/div[2]/div/button')  # 发送验证码
     ipt_sms_code_loc = (By.CSS_SELECTOR, 'input[placeholder="Please enter verification code"]')  # 输入验证码
     ipt_pwd_loc = (By.CSS_SELECTOR, 'input[placeholder="Please enter login password"]')  # 输入登陆密码
@@ -29,7 +29,7 @@ class RegisterPage(Page,Base):
     ipt_email_code_loc = (By.CSS_SELECTOR, 'input[placeholder="Please enter Email verification code"]')  # 输入验证码
     ipt_payment_pwd_loc = (By.CSS_SELECTOR, 'input[placeholder="Please set up payment password"]')  # 输入支付密码
     ipt_confirm_payment_pwd_loc = (By.CSS_SELECTOR, 'input[placeholder="Please confirm the payment password"]')  # 输入支付密码
-    ck_register_loc = (By.CSS_SELECTOR, 'input.el-button submit el-button--primary')   # 点击注册
+    ck_register_loc = (By.XPATH, '//span[.="Register"]')   # 点击注册
 
     '''点击注册后跳转注册成功页面'''
     ck_agree_loc =(By.XPATH, '//*[@id="app"]/section/section/div/div/div[3]/span/button[2]')
@@ -57,8 +57,8 @@ class RegisterPage(Page,Base):
     def setect_nation(self, nation, phone):
         """选择国家、输入手机号码、验证码"""
         self.driver.find_element(*self.ck_nation_loc).click()
-        sleep(2)
-        nation_xpath = (By.XPATH, f'//li[contains(., "{nation}")]')  # 定位国家
+        # nation_xpath = (By.XPATH, f'//span[contains(., "{nation}")]')  # 定位国家
+        nation_xpath = (By.XPATH, f'//span[starts-with(., "{nation}")]')  # 定位国家
         self.driver.find_element(*nation_xpath).click()
         sleep(1)
         self.driver.find_element(*self.ipt_phone_number_loc).send_keys(phone)
@@ -79,7 +79,7 @@ class RegisterPage(Page,Base):
         self.driver.find_element(*self.ck_time_zone_loc).click()
         sleep(2)
         # self.driver.find_element(*self.st_time_zone_loc).click()
-        time_zone_xpath = (By.XPATH, '//li[contains(., "(GMT-10:00) Tahiti Time")]')  # 定位经营类型
+        time_zone_xpath = (By.XPATH, '//li[contains(., "(GMT+08:00) China Standard Time - Shanghai")]')  # 定位时区
         self.driver.find_element(*time_zone_xpath).click()
 
     def input_imei(self, value):

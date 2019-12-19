@@ -26,7 +26,7 @@ class ForegotPasswordTest(unittest.TestCase):
         用例一：修改登陆密码
         """
         try:
-            self.a.open_url('https://buy-fat-2.pundix.com/#/findPwd/?path=test')
+            self.a.open_url('https://buy-fat-1.pundix.com/#/findPwd/?path=test')
             self.a.input_brand_name(brand)
             self.a.setect_nation(nation, phone)
             self.a.input_code_and_next()

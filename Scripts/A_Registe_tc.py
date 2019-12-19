@@ -23,7 +23,7 @@ class RegisteTest(unittest.TestCase):
         self.a = RegisterPage()
 
     def tearDown(self):
-        time.sleep(30)
+        time.sleep(5)
         self.a.close_broser()
 
     @BeautifulReport.add_img('001_Register_Fail')
@@ -44,12 +44,12 @@ class RegisteTest(unittest.TestCase):
             self.a.open_url('https://buy-fat-1.pundix.com/#/register/?path=test')
             self.a.select_business_category()  # 选择经营品类，默认选择 Government
             self.a.set_brand_name(brand_name)  # 输入品牌名称
+            self.a.setect_nation(nation, phone_number)  # 选择国家、输入号码、验证码
             self.a.input_login_password(loginpwd, name, surname)  # 输入登陆密码、名、姓
             self.a.select_time_zone()  # 选择时区
             self.a.input_imei(imei)  # 输入Imei
             self.a.input_email_address(email)  # 输入邮箱
             self.a.input_payment_password(paymentpwd)  # 输入支付密码、确认支付密码
-            self.a.setect_nation(nation, phone_number)  # 选择国家、输入号码、验证码
             self.a.click_regisetr_laction()  # 点击注册
             self.a.click_return_login()      # 点击返回登陆
         except (BaseException, AssertionError) as msg:  # BaseException所有异常的基类,AssertionError断言语句失败
