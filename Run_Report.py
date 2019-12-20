@@ -4,6 +4,9 @@ from BeautifulReport import BeautifulReport
 
 # 获取测试用例文件夹路径
 curpath = os.path.dirname(os.path.realpath(__file__))
+reportpath = os.path.join(curpath, "Reports")  # 判断测试报告存放目录是否存在，不在则进行创建
+if not os.path.exists(reportpath):
+    os.mkdir(reportpath)
 
 class RunReport:
     """
