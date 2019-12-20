@@ -55,35 +55,27 @@ class CashierAccount(Page, Base):
         sleep(5)
         self.driver.find_element(*self.ipt_email_code).send_keys('2222')
         self.driver.find_element(*self.ck_submit_loc).click()
-        # if self.findElement('20010 The SMS verification code is incorrect'):
-        #     return True
-        # elif self.findElement('50000 Funds is empty'):
-        #     return True
-        # elif self.findElement('40007 Wrong password'):
-        #     return True
-        # elif self.findElement('Withdrawal submitted successfully'):
-        #     return True
-        # else:
-        #     return False
-        WebDriverWait(self.driver, 10, 0.5).until(
+        WebDriverWait(self.driver, 5, 0.5).until(
             EC.text_to_be_present_in_element(self.get_error_msg, 'Withdrawal submitted successfully' or
-                                           '50000 Funds is empty' or
-                                           '20010 The SMS verification code is incorrect' or
-                                           '40007 Wrong password' or
-                                           '20013 The Email verification code is incorrect'))
+                                             '50000 Funds is empty' or
+                                             '20010 The SMS verification code is incorrect' or
+                                             '40007 Wrong password' or
+                                             '20013 The Email verification code is incorrect'))
         return self.driver.find_element(*self.get_error_msg).text
 
     def withdrawal_DAI(self, text, text1):
         """提现DAI"""
-        self.driver.find_element(*self.ck_withdrawal_DAI_loc).click()
+        Dai_xpath = (By.XPATH, '//span[starts-with(., "DAI")]')
+        self.driver.find_element(*Dai_xpath).click()
         sleep(1)
-        self.withdrawal_info(text, text1)
+        return self.withdrawal_info(text, text1)
 
     def withdrawal_USDT(self, text, text1):
         """提现USDT"""
-        self.driver.find_element(*self.ck_withdrawal_USDT_loc).click()
+        USDT_xpath = (By.XPATH, '//span[starts-with(., "USDT")]')
+        self.driver.find_element(*USDT_xpath).click()
         sleep(1)
-        self.withdrawal_info(text, text1)
+        return self.withdrawal_info(text, text1)
 
     def click_receivables(self):
         """点击财务记录-收款"""
