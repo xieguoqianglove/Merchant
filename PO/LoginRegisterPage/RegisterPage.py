@@ -106,7 +106,7 @@ class RegisterPage(Page,Base):
         sleep(2)
         self.driver.find_element(*self.ck_agree_loc).click()
         '''点击注册后跳转注册成功页面'''
-        WebDriverWait(self.driver,10).until(EC.text_to_be_present_in_element(self.txt_regist_suecces_msg, u"Registration success"))
+        WebDriverWait(self.driver, 10).until(EC.text_to_be_present_in_element(self.txt_regist_suecces_msg, u"Registration success"))
         r = self.driver.find_element(*self.txt_regist_suecces_msg).text
         print(self.driver.find_element(*self.txt_brand_number_msg).text)  # 输入品牌号
         return r

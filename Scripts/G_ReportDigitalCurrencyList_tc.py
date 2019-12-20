@@ -11,6 +11,7 @@ shop_name = Getdata('OrderList_tc', 'shop_name')
 start_day = Getdata('ReportCashList_tc', 'start_day')
 end_day = Getdata('ReportCashList_tc', 'end_day')
 order_number = Getdata('ReportCurrencyList_tc', 'order_number')
+cashier_name = Getdata('ReportCurrencyList_tc', 'cashier_name')
 
 class DigitalCurrencyRecordListTest(unittest.TestCase):
     """报表--数字货币记录 页面"""
@@ -32,7 +33,7 @@ class DigitalCurrencyRecordListTest(unittest.TestCase):
         sleep(1)
         self.c.click_DigitalCurrencyRecordList()
 
-    @BeautifulReport.add_img("001_Currency_page_fail")
+    @BeautifulReport.add_img("DigitalCurrency_001_Currency_page_fail")
     def test_001_Check_Cash_page(self):
         """
         用例一 ：检查数字货币记录页面是否正常
@@ -41,11 +42,11 @@ class DigitalCurrencyRecordListTest(unittest.TestCase):
             self.DigitalCurrencyRecordList()
             self.assertTrue(self.c.get_Digital_record_msg_txt())
         except (BaseException, AssertionError) as msg:
-            self.c.save_img('001_Currency_page_fail')
+            self.c.save_img('DigitalCurrency_001_Currency_page_fail')
             InsertLog().debug(msg)
             raise BaseException
 
-    @BeautifulReport.add_img("002_input_shop_fail")
+    @BeautifulReport.add_img("DigitalCurrency_002_input_shop_fail")
     def test_002_Verify_Input_Shop_Name(self):
         """
         用例二 ：验证数字货币记录>门店名称使用输入的方式查询
@@ -55,11 +56,11 @@ class DigitalCurrencyRecordListTest(unittest.TestCase):
             sleep(1)
             self.assertTrue(self.c.verify_input_shop_query(shop_name))
         except (BaseException, AssertionError) as msg:
-            self.c.save_img('002_input_shop_fail')
+            self.c.save_img('DigitalCurrency_002_input_shop_fail')
             InsertLog().debug(msg)
             raise BaseException
 
-    @BeautifulReport.add_img('003_select_shop_fail')
+    @BeautifulReport.add_img('DigitalCurrency_003_select_shop_fail')
     def test_003_Verify_Select_Shop_name(self):
         """
         用例三 ：验证数字货币记录>门店名称使用全选的方式查询
@@ -68,11 +69,11 @@ class DigitalCurrencyRecordListTest(unittest.TestCase):
             self.DigitalCurrencyRecordList()
             self.assertIn(shop_name, self.c.verify_select_shop_query())
         except (BaseException, AssertionError) as msg:
-            self.c.save_img('003_select_shop_fail')
+            self.c.save_img('DigitalCurrency_003_select_shop_fail')
             InsertLog().debug(msg)
             raise BaseException
 
-    @BeautifulReport.add_img('004_reset_fail')
+    @BeautifulReport.add_img('DigitalCurrency_004_reset_fail')
     def test_004_Verify_Reset(self):
         """
         用例四 ：验证数字货币记录>重置功能
@@ -81,11 +82,11 @@ class DigitalCurrencyRecordListTest(unittest.TestCase):
             self.DigitalCurrencyRecordList()
             self.assertIn('', self.c.verify_reset_function(start_day))  # 重置成功则返回空字符串
         except (BaseException, AssertionError) as msg:
-            self.c.save_img('004_reset_fail')
+            self.c.save_img('DigitalCurrency_004_reset_fail')
             InsertLog().debug(msg)
             raise BaseException
 
-    @BeautifulReport.add_img('005_Day_fail')
+    @BeautifulReport.add_img('DigitalCurrency_005_Day_fail')
     def test_005_Verify_Day_Query(self):
         """
         用例五 ：验证数字货币记录>日期查询功能
@@ -94,11 +95,11 @@ class DigitalCurrencyRecordListTest(unittest.TestCase):
             self.DigitalCurrencyRecordList()
             self.assertIsNotNone(self.c.verify_day_query(start_day, end_day))
         except (BaseException, AssertionError) as msg:
-            self.c.save_img('005_Day_fail')
+            self.c.save_img('DigitalCurrency_005_Day_fail')
             InsertLog().debug(msg)
             raise BaseException
 
-    @BeautifulReport.add_img('006_order_number_fail')
+    @BeautifulReport.add_img('DigitalCurrency_006_order_number_fail')
     def test_006_Verify_Day_Query(self):
         """
         用例六 ：验证订单号查询功能
@@ -107,22 +108,23 @@ class DigitalCurrencyRecordListTest(unittest.TestCase):
             self.DigitalCurrencyRecordList()
             self.assertTrue(self.c.verify_order_number(order_number))
         except (BaseException, AssertionError) as msg:
-            self.c.save_img('006_order_number_fail')
+            self.c.save_img('DigitalCurrency_006_order_number_fail')
             InsertLog().debug(msg)
             raise BaseException
 
-    @BeautifulReport.add_img('007_cashier_fail')
-    def test_008_Verify_Cashier(self):
+    @BeautifulReport.add_img('DigitalCurrency_007_cashier_fail')
+    def test_007_Verify_Cashier(self):
         """
         用例七 ：验证收银员查询功能
         """
         try:
             self.DigitalCurrencyRecordList()
-            self.assertIsNotNone(self.c.verify_cashier())
+            self.assertIsNotNone(self.c.verify_cashier(cashier_name))
         except (BaseException, AssertionError) as msg:
-            self.c.save_img('007_cashier_fail')
+            self.c.save_img('DigitalCurrency_007_cashier_fail')
             InsertLog().debug(msg)
             raise BaseException
 
+    # ..F...................F.....................FSSSSSSSSSSSSF..
 if __name__ == '__main__':
     unittest.main(verbosity=2)

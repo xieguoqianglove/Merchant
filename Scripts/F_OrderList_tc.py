@@ -29,7 +29,7 @@ class OrderManagementTest(unittest.TestCase):
         sleep(1)
         self.c.click_OrderManagement()
 
-    @BeautifulReport.add_img("001_page_fail")
+    @BeautifulReport.add_img("OrderTest_001_page_fail")
     def test_001_Check_page(self):
         """
         用例一 ：检查页面是否正常
@@ -38,11 +38,11 @@ class OrderManagementTest(unittest.TestCase):
             self.OrderManagermentBusiness()
             self.assertTrue(self.c.findElement('Cashier Order'))
         except (BaseException, AssertionError) as msg:
-            self.c.save_img('001_page_fail')
+            self.c.save_img('OrderTest_001_page_fail')
             InsertLog().debug(msg)
             raise BaseException
 
-    @BeautifulReport.add_img("002_search_fail")
+    @BeautifulReport.add_img("OrderTest_002_search_fail")
     def test_002_Verify_Input_Shop_Name(self):
         """
         用例二 ：验证门店名称使用输入的方式查询
@@ -51,11 +51,11 @@ class OrderManagementTest(unittest.TestCase):
             self.OrderManagermentBusiness()
             self.assertTrue(self.c.input_shop_query(shop_name))
         except (BaseException, AssertionError) as msg:
-            self.c.save_img('002_search_fail')
+            self.c.save_img('OrderTest_002_search_fail')
             InsertLog().debug(msg)
             raise BaseException
 
-    @BeautifulReport.add_img("003_search_fail")
+    @BeautifulReport.add_img("OrderTest_003_search_fail")
     def test_003_Verify_Select_Shop_name(self):
         """
         用例三 ：验证门店名称使用全选的方式查询
@@ -64,11 +64,11 @@ class OrderManagementTest(unittest.TestCase):
             self.OrderManagermentBusiness()
             self.assertTrue(self.c.verify_select_shop_query())
         except (BaseException, AssertionError) as msg:
-            self.c.save_img('003_search_fail')
+            self.c.save_img('OrderTest_003_search_fail')
             InsertLog().debug(msg)
             raise BaseException
 
-    @BeautifulReport.add_img("004_details_fail")
+    @BeautifulReport.add_img("OrderTest_004_details_fail")
     def test_004_Verify_Modify_Function(self):
         """
         用例四 ：验证详情页面
@@ -77,11 +77,11 @@ class OrderManagementTest(unittest.TestCase):
             self.OrderManagermentBusiness()
             self.assertTrue(self.c.verify_modify_function())
         except (BaseException, AssertionError) as msg:
-            self.c.save_img('004_details_fail')
+            self.c.save_img('OrderTest_004_details_fail')
             InsertLog().debug(msg)
             raise BaseException
 
-    @BeautifulReport.add_img("005_reset_fail")
+    @BeautifulReport.add_img("OrderTest_005_reset_fail")
     def test_005_Verify_Reset(self):
         """
         用例五 ：验证重置功能
@@ -91,7 +91,7 @@ class OrderManagementTest(unittest.TestCase):
             self.OrderManagermentBusiness()
             self.assertIn('', self.c.verify_reset_function(shop_name))  # 重置成功则返回''
         except (BaseException, AssertionError) as msg:
-            self.c.save_img('005_reset_fail')
+            self.c.save_img('OrderTest_005_reset_fail')
             InsertLog().debug(msg)
             raise BaseException
 

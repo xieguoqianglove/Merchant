@@ -32,7 +32,7 @@ class AssetsSalesListTest(unittest.TestCase):
         sleep(1)
         self.c.click_sales_account()
 
-    @BeautifulReport.add_img('001_funds_sales_account_fail')
+    @BeautifulReport.add_img('AssetsSales_001_funds_sales_account_fail')
     def test_001_Cashier_Account_page(self):
         """
         用例一 ：检查页面是否正常
@@ -41,11 +41,11 @@ class AssetsSalesListTest(unittest.TestCase):
             self.AssetsListBusiness()
             self.assertTrue(self.c.get_account_history_txt())
         except (BaseException, AssertionError) as msg:
-            self.c.save_img('001_funds_sales_account_fail')
+            self.c.save_img('AssetsSales_001_funds_sales_account_fail')
             InsertLog().debug(msg)
             raise BaseException
 
-    @BeautifulReport.add_img('002_funds_withdrawal_usdt_fail')
+    @BeautifulReport.add_img('AssetsSales_002_funds_withdrawal_usdt_fail')
     def test_002_Withdrawal_USDT(self):
         """
         用例二 ：提现USDT功能
@@ -54,11 +54,11 @@ class AssetsSalesListTest(unittest.TestCase):
             self.AssetsListBusiness()
             self.assertTrue(self.c.withdrawal_USDT(withdrawal_address, paypwd))
         except (BaseException, AssertionError) as msg:
-            self.c.save_img('002_funds_withdrawal_usdt_fail')
+            self.c.save_img('AssetsSales_002_funds_withdrawal_usdt_fail')
             InsertLog().debug(msg)
             raise BaseException
 
-    @BeautifulReport.add_img('003_funds_withdrawal_dai_fail')
+    @BeautifulReport.add_img('AssetsSales_003_funds_withdrawal_dai_fail')
     def test_003_Withdrawal_DAI(self):
         """
         用例三 ：提现DAI功能
@@ -67,11 +67,11 @@ class AssetsSalesListTest(unittest.TestCase):
             self.AssetsListBusiness()
             self.assertTrue(self.c.withdrawal_DAI(withdrawal_address, paypwd))
         except (BaseException, AssertionError) as msg:
-            self.c.save_img('003_funds_withdrawal_dai_fail')
+            self.c.save_img('AssetsSales_003_funds_withdrawal_dai_fail')
             InsertLog().debug(msg)
             raise BaseException
 
-    @BeautifulReport.add_img('004_deposit_fail')
+    @BeautifulReport.add_img('AssetsSales_004_deposit_fail')
     def test_004_Deposit_Function(self):
         """
         用例四 ：检验充值功能
@@ -80,11 +80,11 @@ class AssetsSalesListTest(unittest.TestCase):
             self.AssetsListBusiness()
             self.assertTrue(self.c.click_deposit())
         except (BaseException, AssertionError) as msg:
-            self.c.save_img('004_deposit_fail')
+            self.c.save_img('AssetsSales_004_deposit_fail')
             InsertLog().debug(msg)
             raise BaseException
 
-    @BeautifulReport.add_img('005_reset_fail')
+    @BeautifulReport.add_img('AssetsSales_005_reset_fail')
     def test_005_Verify_Reset(self):
         """
         用例五 ：验证销售账户>重置功能
@@ -93,11 +93,11 @@ class AssetsSalesListTest(unittest.TestCase):
             self.AssetsListBusiness()
             self.assertIn('', self.c.verify_reset_function(start_day))  # 重置成功则返回空字符串
         except (BaseException, AssertionError) as msg:
-            self.c.save_img('005_reset_fail')
+            self.c.save_img('AssetsSales_005_reset_fail')
             InsertLog().debug(msg)
             raise BaseException
 
-    @BeautifulReport.add_img('006_Day_fail')
+    @BeautifulReport.add_img('AssetsSales_006_Day_fail')
     def test_006_Verify_Day_Query(self):
         """
         用例六 ：验证销售账户>日期查询功能
@@ -106,7 +106,7 @@ class AssetsSalesListTest(unittest.TestCase):
             self.AssetsListBusiness()
             self.assertIsNotNone(self.c.verify_day_query(start_day, end_day))
         except (BaseException, AssertionError) as msg:
-            self.c.save_img('006_Day_fail')
+            self.c.save_img('AssetsSales_006_Day_fail')
             InsertLog().debug(msg)
             raise BaseException
 

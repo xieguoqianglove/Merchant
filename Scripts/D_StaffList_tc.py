@@ -19,7 +19,7 @@ loginpwd = Getdata('Login_tc', 'password')
 paymentpwd = Getdata('StaffAccountList_tc', 'paymentpwd')
 newphone = Base.create_mobile()
 
-class PersonnelAccountListTest(unittest.TestCase):
+class StaffListTest(unittest.TestCase):
     """测试账号列表页面"""
 
     @classmethod
@@ -39,7 +39,7 @@ class PersonnelAccountListTest(unittest.TestCase):
         sleep(1)
         self.c.click_account_list()
 
-    @BeautifulReport.add_img("001_check_page_fail")
+    @BeautifulReport.add_img("StaffListTest_001_check_page_fail")
     def test_001_Check_page(self):
         """
         用例一 ：检查页面是否正常
@@ -48,11 +48,11 @@ class PersonnelAccountListTest(unittest.TestCase):
             self.AccountListBusiness()
             self.assertTrue(self.c.get_new_account_txt())
         except (BaseException, AssertionError) as msg:
-            self.c.save_img('001_check_page_fail')
+            self.c.save_img('StaffListTest_001_check_page_fail')
             InsertLog().debug(msg)
             raise BaseException
 
-    @BeautifulReport.add_img('002_shop_check_fail')
+    @BeautifulReport.add_img('StaffListTest_002_shop_check_fail')
     def test_002_Verify_Select_Shop_name(self):
         """
         用例二 ：验证门店名称使用全选的方式查询
@@ -61,11 +61,11 @@ class PersonnelAccountListTest(unittest.TestCase):
             self.AccountListBusiness()
             self.assertIsNotNone(self.c.verify_select_shop_query())
         except (BaseException, AssertionError) as msg:
-            self.c.save_img('002_shop_check_fail')
+            self.c.save_img('StaffListTest_002_shop_check_fail')
             InsertLog().debug(msg)
             raise BaseException
 
-    @BeautifulReport.add_img('003_staff_number_fail')
+    @BeautifulReport.add_img('StaffListTest_003_staff_number_fail')
     def test_003_Verify_Staff_Number(self):
         """
         用例三 ：验证工号查询
@@ -74,11 +74,11 @@ class PersonnelAccountListTest(unittest.TestCase):
             self.AccountListBusiness()
             self.assertTrue(self.c.verify_work_number_query(staff_number))
         except (BaseException, AssertionError) as msg:
-            self.c.save_img('003_staff_number_fail')
+            self.c.save_img('StaffListTest_003_staff_number_fail')
             InsertLog().debug(msg)
             raise BaseException
 
-    @BeautifulReport.add_img('004_user_number_fail')
+    @BeautifulReport.add_img('StaffListTest_004_user_number_fail')
     def test_004_Verify_User_Number(self):
         """
         用例四 ：验证用户编号查询
@@ -87,11 +87,11 @@ class PersonnelAccountListTest(unittest.TestCase):
             self.AccountListBusiness()
             self.assertTrue(self.c.verify_user_number_query(user_number))
         except (BaseException, AssertionError) as msg:
-            self.c.save_img('004_user_number_fail')
+            self.c.save_img('StaffListTest_004_user_number_fail')
             InsertLog().debug(msg)
             raise BaseException
 
-    @BeautifulReport.add_img('005_phone_number_fail')
+    @BeautifulReport.add_img('StaffListTest_005_phone_number_fail')
     def test_005_Verify_Phone(self):
         """
         用例五 ：验证手机号码查询
@@ -100,11 +100,11 @@ class PersonnelAccountListTest(unittest.TestCase):
             self.AccountListBusiness()
             self.assertTrue(self.c.verify_telephone_query(phone_number))
         except (BaseException, AssertionError) as msg:
-            self.c.save_img('005_phone_number_fail')
+            self.c.save_img('StaffListTest_005_phone_number_fail')
             InsertLog().debug(msg)
             raise BaseException
 
-    @BeautifulReport.add_img('006_name_search_fail')
+    @BeautifulReport.add_img('StaffListTest_006_name_search_fail')
     def test_006_Verify_Name(self):
         """
         用例六 ：验证姓名查询
@@ -113,11 +113,11 @@ class PersonnelAccountListTest(unittest.TestCase):
             self.AccountListBusiness()
             self.assertTrue(self.c.verify_name_query(user_name))
         except (BaseException, AssertionError) as msg:
-            self.c.save_img('006_name_search_fail')
+            self.c.save_img('StaffListTest_006_name_search_fail')
             InsertLog().debug(msg)
             raise BaseException
 
-    @BeautifulReport.add_img('007_reset_fail')
+    @BeautifulReport.add_img('StaffListTest_007_reset_fail')
     def test_007_Verify_Reset(self):
         """
         用例七 ：验证重置功能
@@ -126,11 +126,11 @@ class PersonnelAccountListTest(unittest.TestCase):
             self.AccountListBusiness()
             self.assertIn('', self.c.verify_reset_function(user_number))  # 重置成功则返回空字符串
         except (BaseException, AssertionError) as msg:
-            self.c.save_img('007_reset_fail')
+            self.c.save_img('StaffListTest_007_reset_fail')
             InsertLog().debug(msg)
             raise BaseException
 
-    @BeautifulReport.add_img('008_edit_fail')
+    @BeautifulReport.add_img('StaffListTest_008_edit_fail')
     def test_008_Verify_Modify_Success(self):
         """
         用例八 ：验证修改成功
@@ -139,11 +139,11 @@ class PersonnelAccountListTest(unittest.TestCase):
             self.AccountListBusiness()
             self.assertTrue(self.c.verify_modify_function())
         except (BaseException, AssertionError) as msg:
-            self.c.save_img('008_edit_fail')
+            self.c.save_img('StaffListTest_008_edit_fail')
             InsertLog().debug(msg)
             raise BaseException
 
-    @BeautifulReport.add_img('009_add_account_fail')
+    @BeautifulReport.add_img('StaffListTest_009_add_account_fail')
     def test_009_Add_Account(self):
         """
         用例九 ：新增账号
@@ -152,7 +152,7 @@ class PersonnelAccountListTest(unittest.TestCase):
             self.AccountListBusiness()
             self.assertTrue(self.c.add_account(nation, newphone, name, loginpwd, paymentpwd))
         except (BaseException, AssertionError) as msg:
-            self.c.save_img('009_add_account_fail')
+            self.c.save_img('StaffListTest_009_add_account_fail')
             InsertLog().debug(msg)
             raise BaseException
 

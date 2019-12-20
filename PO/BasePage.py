@@ -53,12 +53,13 @@ class Base:
         """
         self.driver.find_element(*element).send_keys(Keys.DOWN)
 
-    def wait_element(self,element):
+    def wait_element(self, element):
         """
         等待元素出现，默认等待10秒，0.5毫秒扫描一次
         :param element: 元素(部分或者全部元素内容)
         :return:
         """
+        # get_error_msg = (By.CSS_SELECTOR, 'div.el-message el-message--error')  # 提示语
         get_error_msg = (By.CSS_SELECTOR, 'p.el-message__content')  # 提示语
         try:
             WebDriverWait(self.driver, 10, 0.5).until(

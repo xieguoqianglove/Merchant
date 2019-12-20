@@ -23,7 +23,7 @@ class CashierAccount(Page, Base):
     ck_email_send_loc = (By.XPATH, '//*[@id="addressForm"]/div[7]/button')  # 点击获取邮箱验证码
     ipt_email_code = (By.XPATH, '//*[@id="addressForm"]/div[7]/div/div/div[1]/input')  # 输入邮箱验证码
     ck_submit_loc = (By.XPATH, '//span[.="Submit"]')  # 提交提现信息
-    txt_success_msg = (By.XPATH, '/html/body/div[2]')
+    get_error_msg = (By.CSS_SELECTOR, 'p.el-message__content')  # 提示语
 
     '''财务记录菜单'''
     ck_Received_loc = (By.XPATH, '//*[@class="toolbar"]/div/label[2]/span')
@@ -55,20 +55,23 @@ class CashierAccount(Page, Base):
         sleep(5)
         self.driver.find_element(*self.ipt_email_code).send_keys('2222')
         self.driver.find_element(*self.ck_submit_loc).click()
-        sleep(1)
-        if self.findElement('20010 The SMS verification code is incorrect'):
-            return True
-        elif self.findElement('50000 Funds is empty'):
-            return True
-        elif self.findElement('40007 Wrong password'):
-            return True
-        elif self.findElement('Withdrawal submitted successfully'):
-            return True
-        else:
-            return False
-        # WebDriverWait(self.driver, 10, 0.5).until(
-        #     EC.text_to_be_present_in_element(self.txt_success_msg, 'Withdrawal submitted successfully'))
-        # return self.driver.find_element(*self.txt_success_msg).text
+        # if self.findElement('20010 The SMS verification code is incorrect'):
+        #     return True
+        # elif self.findElement('50000 Funds is empty'):
+        #     return True
+        # elif self.findElement('40007 Wrong password'):
+        #     return True
+        # elif self.findElement('Withdrawal submitted successfully'):
+        #     return True
+        # else:
+        #     return False
+        WebDriverWait(self.driver, 10, 0.5).until(
+            EC.text_to_be_present_in_element(self.get_error_msg, 'Withdrawal submitted successfully' or
+                                           '50000 Funds is empty' or
+                                           '20010 The SMS verification code is incorrect' or
+                                           '40007 Wrong password' or
+                                           '20013 The Email verification code is incorrect'))
+        return self.driver.find_element(*self.get_error_msg).text
 
     def withdrawal_DAI(self, text, text1):
         """提现DAI"""
@@ -95,9 +98,9 @@ class CashierAccount(Page, Base):
         """点击财务记录-退款"""
         self.driver.find_element(*self.txt_account_history_loc).click()
         sleep(1)
-        WebDriverWait(self.driver, 10, 0.5).until(
-            EC.text_to_be_present_in_element(self.txt_received_msg, "No data"))
-        return self.driver.find_element(*self.txt_received_msg).text
+        self.driver.find_element(*self.ck_Refund_loc).click()
+        if self.findElement('No data'):
+            return True
 
     def click_withdrawal(self):
         """点击财务记录-提现"""

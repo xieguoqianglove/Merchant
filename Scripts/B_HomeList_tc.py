@@ -19,7 +19,7 @@ class HomeListTest(unittest.TestCase):
         # sleep(40)  # 防止提示验证码发送过快
         self.c.close_broser()
 
-    @BeautifulReport.add_img('001_Home_fail')
+    @BeautifulReport.add_img('HomeListTest_001_Home_fail')
     def test_001_Check_page(self):
         """
         用例一 ：检查页面是否正常
@@ -30,7 +30,7 @@ class HomeListTest(unittest.TestCase):
             self.c.click_HomePage()
             self.assertTrue(self.c.get_Business_income_today_msg())
         except (BaseException, AssertionError) as msg:  # BaseException所有异常的基类,AssertionError断言语句失败
-            self.c.save_img('001_Home_fail')
+            self.c.save_img('HomeListTest_001_Home_fail')
             InsertLog().debug(msg)
             raise BaseException
 

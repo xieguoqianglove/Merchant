@@ -10,7 +10,7 @@ from BeautifulReport import BeautifulReport
 newloginpwd = Getdata('UserCenterList_tc', 'newloginpwd')
 newpaypwd = Getdata('UserCenterList_tc', 'newpaypwd')
 
-class ZPersonalCentPasswordList(unittest.TestCase):
+class UserCentPasswordList(unittest.TestCase):
     """个人中心: 修改支付密码、登录密码、用户信息、退出"""
 
     @classmethod
@@ -24,7 +24,7 @@ class ZPersonalCentPasswordList(unittest.TestCase):
         sleep(20)
         self.c.close_broser()
 
-    @BeautifulReport.add_img("001_User_info_fail")
+    @BeautifulReport.add_img("UserCent_001_User_info_fail")
     def test_001_Click_User_Information_Page(self):
         """
         用例一 ：检查用户信息页面是否正常
@@ -33,11 +33,11 @@ class ZPersonalCentPasswordList(unittest.TestCase):
             self.b.switch_to_Personal_CenterPage()
             self.assertTrue(self.c.click_user_information())
         except (BaseException, AssertionError) as msg:
-            self.c.save_img('001_User_info_fail')
+            self.c.save_img('UserCent_001_User_info_fail')
             InsertLog().debug(msg)
             raise BaseException
 
-    @BeautifulReport.add_img("002_chang_loginpwd_fail")
+    @BeautifulReport.add_img("UserCent_002_chang_loginpwd_fail")
     def test_002_Change_Login_Password_Page(self):
         """
         用例二 ：修改登录密码功能
@@ -46,11 +46,11 @@ class ZPersonalCentPasswordList(unittest.TestCase):
             self.b.switch_to_Personal_CenterPage()
             self.assertTrue(self.c.click_login_password(newloginpwd, newloginpwd))
         except (BaseException, AssertionError) as msg:
-            self.c.save_img('002_chang_loginpwd_fail')
+            self.c.save_img('UserCent_002_chang_loginpwd_fail')
             InsertLog().debug(msg)
             raise BaseException
 
-    @BeautifulReport.add_img("003_chang_paypwd_fail")
+    @BeautifulReport.add_img("UserCent_003_chang_paypwd_fail")
     def test_003_Change_Payment_Password_Page(self):
         """
         用例三 ：修改支付密码功能
@@ -59,11 +59,11 @@ class ZPersonalCentPasswordList(unittest.TestCase):
             self.b.switch_to_Personal_CenterPage()
             self.assertTrue(self.c.click_payment_password(newpaypwd, newpaypwd))
         except (BaseException, AssertionError) as msg:
-            self.c.save_img('003_chang_paypwd_fail')
+            self.c.save_img('UserCent_003_chang_paypwd_fail')
             InsertLog().debug(msg)
             raise BaseException
 
-    @BeautifulReport.add_img("004_exit_fail")
+    @BeautifulReport.add_img("UserCent_004_exit_fail")
     # @unittest.skip('跳过')
     def test_004_Click_Exit_Login_Page(self):
         """
@@ -73,7 +73,7 @@ class ZPersonalCentPasswordList(unittest.TestCase):
             self.b.switch_to_Personal_CenterPage()
             self.assertTrue(self.c.click_exit_login())
         except (BaseException, AssertionError) as msg:
-            self.c.save_img('004_exit_fail')
+            self.c.save_img('UserCent_004_exit_fail')
             InsertLog().debug(msg)
             raise BaseException
 

@@ -33,7 +33,7 @@ class ShopListTest(unittest.TestCase):
         sleep(1)
         self.c.click_shop_list()
 
-    @BeautifulReport.add_img('001_page_error')
+    @BeautifulReport.add_img('ShopListTest_001_page_error')
     def test_001_Check_page(self):
         """
         用例一 ：检查页面是否正常
@@ -46,7 +46,7 @@ class ShopListTest(unittest.TestCase):
             InsertLog().debug(msg)
             raise BaseException
 
-    @BeautifulReport.add_img('002_add_shop_fail')
+    @BeautifulReport.add_img('ShopListTest_002_add_shop_fail')
     def test_002_Add_Shop(self):
         """
         用例二 ：新增门店
@@ -55,11 +55,11 @@ class ShopListTest(unittest.TestCase):
             self.ShopListBusiness()
             self.assertTrue(self.c.add_shop_success(add_shop_name, u'深圳南山', tel))
         except (BaseException, AssertionError) as msg:
-            self.c.save_img('002_add_shop_fail')
+            self.c.save_img('ShopListTest_002_add_shop_fail')
             InsertLog().debug(msg)
             raise BaseException
 
-    @BeautifulReport.add_img('003_search_fail')
+    @BeautifulReport.add_img('ShopListTest_003_search_fail')
     def test_003_Verify_Shop_number(self):
         """
         用例三 ：验证门店编号查询
@@ -69,11 +69,11 @@ class ShopListTest(unittest.TestCase):
             self.ShopListBusiness()
             self.assertTrue(self.c.verify_shop_number_query(shop_number))
         except (BaseException, AssertionError) as msg:
-            self.c.save_img('003_search_fail')
+            self.c.save_img('ShopListTest_003_search_fail')
             InsertLog().debug(msg)
             raise BaseException
 
-    @BeautifulReport.add_img('004_search_fail')
+    @BeautifulReport.add_img('ShopListTest_004_search_fail')
     def test_004_Verify_Shop_Name(self):
         """
         用例四 ：验证门店名称查询
@@ -82,11 +82,11 @@ class ShopListTest(unittest.TestCase):
             self.ShopListBusiness()
             self.assertTrue(self.c.verify_shop_name_query(shop_name))
         except (BaseException, AssertionError) as msg:
-            self.c.save_img('004_search_fail')
+            self.c.save_img('ShopListTest_004_search_fail')
             InsertLog().debug(msg)
             raise BaseException
 
-    @BeautifulReport.add_img('005_search_fail')
+    @BeautifulReport.add_img('ShopListTest_005_search_fail')
     def test_005_Verify_Tel_Phone(self):
         """
         用例五 ：验证电话查询
@@ -95,11 +95,11 @@ class ShopListTest(unittest.TestCase):
             self.ShopListBusiness()
             self.assertTrue(self.c.verify_telephone_query(tel))
         except (BaseException, AssertionError) as msg:
-            self.c.save_img('005_search_fail')
+            self.c.save_img('ShopListTest_005_search_fail')
             InsertLog().debug(msg)
             raise BaseException
 
-    @BeautifulReport.add_img('006_reset_fail')
+    @BeautifulReport.add_img('ShopListTest_006_reset_fail')
     def test_006_Verify_Reset(self):
         """
         用例六 ：验证重置功能
@@ -109,11 +109,11 @@ class ShopListTest(unittest.TestCase):
             self.ShopListBusiness()
             self.assertIn('', self.c.verify_reset_function(test))  # 重置成功则返回''
         except (BaseException, AssertionError) as msg:
-            self.c.save_img('006_reset_fail')
+            self.c.save_img('ShopListTest_006_reset_fail')
             InsertLog().debug(msg)
             raise BaseException
 
-    @BeautifulReport.add_img('007_edit_fail')
+    @BeautifulReport.add_img('ShopListTest_007_edit_fail')
     def test_007_Verify_Edit_Success(self):
         """
         用例七 ：验证编辑成功后返回信息
@@ -123,11 +123,11 @@ class ShopListTest(unittest.TestCase):
             self.ShopListBusiness()
             self.assertTrue(self.c.verify_edit_function())
         except (BaseException, AssertionError) as msg:
-            self.c.save_img('007_edit_fail')
+            self.c.save_img('ShopListTest_007_edit_fail')
             InsertLog().debug(msg)
             raise BaseException
 
-    @BeautifulReport.add_img('008_delete_fail')
+    @BeautifulReport.add_img('ShopListTest_008_delete_fail')
     def test_008_Verify_Delete_Success(self):
         """
         用例八 ：验证删除成功后返回信息
@@ -136,7 +136,7 @@ class ShopListTest(unittest.TestCase):
             self.ShopListBusiness()
             self.assertTrue(self.c.verify_delete_function())
         except (BaseException, AssertionError) as msg:
-            self.c.save_img('008_delete_fail')
+            self.c.save_img('ShopListTest_008_delete_fail')
             InsertLog().debug(msg)
             raise BaseException
 

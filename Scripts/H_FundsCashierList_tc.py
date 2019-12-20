@@ -30,7 +30,7 @@ class AssetsCashierListTest(unittest.TestCase):
         sleep(1)
         self.c.click_cashier_account()
 
-    @BeautifulReport.add_img('001_funds_cashier_account_fail')
+    @BeautifulReport.add_img('AssetsCash_001_funds_cashier_account_fail')
     def test_001_Cashier_Account_page(self):
         """
         用例一 ：检查页面是否正常
@@ -39,11 +39,11 @@ class AssetsCashierListTest(unittest.TestCase):
             self.CashierAccounListBusiness()
             self.assertTrue(self.c.get_account_history_txt())
         except (BaseException, AssertionError) as msg:
-            self.c.save_img('001_funds_cashier_account_fail')
+            self.c.save_img('AssetsCash_001_funds_cashier_account_fail')
             InsertLog().debug(msg)
             raise BaseException
 
-    @BeautifulReport.add_img('002_funds_withdrawal_usdt_fail')
+    @BeautifulReport.add_img('AssetsCash_002_funds_withdrawal_usdt_fail')
     def test_002_Withdrawal_USDT(self):
         """
         用例二 ：提现USDT功能
@@ -52,11 +52,11 @@ class AssetsCashierListTest(unittest.TestCase):
             self.CashierAccounListBusiness()
             self.assertTrue(self.c.withdrawal_USDT(withdrawal_address, paypwd))
         except (BaseException, AssertionError) as msg:
-            self.c.save_img('002_funds_withdrawal_usdt_fail')
+            self.c.save_img('AssetsCash_002_funds_withdrawal_usdt_fail')
             InsertLog().debug(msg)
             raise BaseException
 
-    @BeautifulReport.add_img('003_funds_withdrawal_dai_fail')
+    @BeautifulReport.add_img('AssetsCash_003_funds_withdrawal_dai_fail')
     def test_003_Withdrawal_DAI(self):
         """
         用例三 ：提现DAI功能
@@ -65,11 +65,11 @@ class AssetsCashierListTest(unittest.TestCase):
             self.CashierAccounListBusiness()
             self.assertTrue(self.c.withdrawal_DAI(withdrawal_address, paypwd))
         except (BaseException, AssertionError) as msg:
-            self.c.save_img('003_funds_withdrawal_dai_fail')
+            self.c.save_img('AssetsCash_003_funds_withdrawal_dai_fail')
             InsertLog().debug(msg)
             raise BaseException
 
-    @BeautifulReport.add_img('004_funds_withdrawal_received_fail')
+    @BeautifulReport.add_img('AssetsCash_004_funds_withdrawal_received_fail')
     def test_004_Click_Receivables(self):
         """
         用例四 ：检查财务记录-收款页面
@@ -78,33 +78,33 @@ class AssetsCashierListTest(unittest.TestCase):
             self.CashierAccounListBusiness()
             self.assertTrue(self.c.click_receivables())
         except (BaseException, AssertionError) as msg:
-            self.c.save_img('004_funds_withdrawal_received_fail')
+            self.c.save_img('AssetsCash_004_funds_withdrawal_received_fail')
             InsertLog().debug(msg)
             raise BaseException
 
-    @BeautifulReport.add_img('005_funds_withdrawal_fail')
+    @BeautifulReport.add_img('AssetsCash_005_funds_withdrawal_fail')
     def test_005_Click_Withdrawal(self):
         """
         用例五 ：检查财务记录-提现页面
         """
         try:
             self.CashierAccounListBusiness()
-            self.assertIn('', self.c.click_withdrawal())
+            self.assertTrue(self.c.click_withdrawal())
         except (BaseException, AssertionError) as msg:
-            self.c.save_img('005_funds_withdrawal_fail')
+            self.c.save_img('AssetsCash_005_funds_withdrawal_fail')
             InsertLog().debug(msg)
             raise BaseException
 
-    @BeautifulReport.add_img('006_funds_withdrawal_refund_fail')
+    @BeautifulReport.add_img('AssetsCash_006_funds_withdrawal_refund_fail')
     def test_006_Click_Refund(self):
         """
-        用例六 ：检查财务记录-提现页面
+        用例六 ：检查财务记录-退款页面
         """
         try:
             self.CashierAccounListBusiness()
-            self.assertIn('', self.c.click_refund())
+            self.assertTrue(self.c.click_refund())
         except (BaseException, AssertionError) as msg:
-            self.c.save_img('006_funds_withdrawal_refund_fail')
+            self.c.save_img('AssetsCash_006_funds_withdrawal_refund_fail')
             InsertLog().debug(msg)
             raise BaseException
 

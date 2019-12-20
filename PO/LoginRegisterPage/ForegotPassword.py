@@ -20,7 +20,7 @@ class ForegotPasswordPage(Page, Base):
     ipt_new_password_loc = (By.CSS_SELECTOR, 'input[placeholder="Please enter login password"]')
     ipt_payment_pwd_loc = (By.CSS_SELECTOR, 'input[placeholder="Please confirm the login password"]')
     ck_complete_loc =(By.XPATH, '//*[@id="app"]/div/div[2]/div/form/button')
-    txt_login_page_msg =(By.XPATH, '//*[@id="app"]/div/div[2]/div/form/button')
+    txt_login_page_msg = (By.XPATH, '//*[@id="app"]/section/div[2]/div[1]/div[1]/p')  # 登录页面的 YOUR DIGITAL ASSETS PASS 文本
 
     # 操作层
     def input_brand_name(self, value):
@@ -54,5 +54,4 @@ class ForegotPasswordPage(Page, Base):
         self.driver.find_element(*self.ipt_payment_pwd_loc).send_keys(values)
         self.driver.find_element(*self.ck_complete_loc).click()
         sleep(2)
-        msg = self.driver.find_element(*self.txt_login_page_msg).text
-        return msg
+        return self.driver.find_element(*self.txt_login_page_msg).text

@@ -23,7 +23,7 @@ class LoginTest(unittest.TestCase):
         sleep(5)
         self.a.close_broser()
 
-    @BeautifulReport.add_img('001_phone_login_fail')
+    @BeautifulReport.add_img('LoginTest_001_phone_login_fail')
     def test_001_Login_Success(self):
         """
         用例一：手机号登陆
@@ -33,11 +33,11 @@ class LoginTest(unittest.TestCase):
             self.a.phone_login(brand, nation, phone, pwd)
             self.assertTrue(self.a.login_success_msg())
         except (BaseException, AssertionError) as msg:
-            self.a.save_img('001_phone_login_fail')
+            self.a.save_img('LoginTest_001_phone_login_fail')
             InsertLog().debug(msg)
             raise BaseException
 
-    @BeautifulReport.add_img('002_email_login_fail')
+    @BeautifulReport.add_img('LoginTest_002_email_login_fail')
     def test_002_Email_login(self):
         """
         用例二： 邮箱登陆
@@ -47,7 +47,7 @@ class LoginTest(unittest.TestCase):
             self.a.email_login(brand, email, pwd)
             self.assertTrue(self.a.login_success_msg())
         except (BaseException, AssertionError) as msg:
-            self.a.save_img('002_email_login_fail')
+            self.a.save_img('LoginTest_002_email_login_fail')
             InsertLog().debug(msg)
             raise BaseException
 

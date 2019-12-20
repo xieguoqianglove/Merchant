@@ -21,8 +21,7 @@ class OverviewAndCash(Page, Base):
         """获取 现金 文本"""
         WebDriverWait(self.driver, 10, 0.5).until(
             EC.text_to_be_present_in_element(self.txt_cash_msg, u"Cash"))
-        r = self.driver.find_element(*self.txt_cash_msg).text
-        return r
+        return self.driver.find_element(*self.txt_cash_msg).text
 
     # 现金记录对象层
     ipt_carh_history_loc = (By.XPATH, '//*[@id="app"]/section/div[2]/div/div/section/section/aside/ul/li[2]')
@@ -53,10 +52,11 @@ class OverviewAndCash(Page, Base):
 
     def verify_input_shop_query(self, text):
         """验证 输入方式的门店 查询"""
+        shop_xpath = (By.XPATH, f'//span[contains(.,"{text}")]')
         self.driver.find_element(*self.ck_store_loc).click()
         self.driver.find_element(*self.ipt_store_loc).send_keys(text)
         sleep(1)
-        self.driver.find_element(*self.st_one_store_loc).click()
+        self.driver.find_element(*shop_xpath).click()
         self.driver.find_element(*self.ck_search_loc).click()
         WebDriverWait(self.driver, 5, 0.5).until(
             EC.text_to_be_present_in_element(self.txt_store_msg, u'%s' % text))

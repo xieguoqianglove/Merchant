@@ -56,8 +56,7 @@ class Account(Page, Base):
         """获取新建账号文本"""
         WebDriverWait(self.driver, 10, 0.5).until(
             EC.text_to_be_present_in_element(self.txt_newaccount_msg, u"New account"))
-        r = self.driver.find_element(*self.txt_newaccount_msg).text
-        return r
+        return self.driver.find_element(*self.txt_newaccount_msg).text
 
     def setect_nation(self, nation, phone):
         """选择国家"""
@@ -100,51 +99,46 @@ class Account(Page, Base):
         self.driver.find_element(*self.ck_all_shop_loc).click()
         sleep(1)
         self.driver.find_element(*self.ck_search_loc).click()
-        r = self.driver.find_element(*self.txt_store_name_msg).text
-        return r
+        return self.driver.find_element(*self.txt_store_name_msg).text
 
     def verify_work_number_query(self, text):
         """验证 工号 查询"""
         self.driver.find_element(*self.ipt_staff_id_loc).send_keys(text)
         self.driver.find_element(*self.ck_search_loc).click()
         sleep(1)
-        r = self.driver.find_element(*self.txt_staff_msg).text
-        return r
+        return self.driver.find_element(*self.txt_staff_msg).text
 
     def verify_user_number_query(self, text):
         """验证 用户编号 查询"""
         self.driver.find_element(*self.ipt_user_number_loc).send_keys(text)
         self.driver.find_element(*self.ck_search_loc).click()
         sleep(1)
-        r = self.driver.find_element(*self.txt_user_No_msg).text
-        return r
+        return self.driver.find_element(*self.txt_user_No_msg).text
 
     def verify_telephone_query(self, text):
         """验证 手机号码 查询"""
         self.driver.find_element(*self.ipt_phone_number_loc).send_keys(text)
         self.driver.find_element(*self.ck_search_loc).click()
         sleep(1)
-        r = self.driver.find_element(*self.txt_phone_No_msg).text
-        return r
+        return self.driver.find_element(*self.txt_phone_No_msg).text
 
     def verify_name_query(self, text):
         """验证  姓名 查询"""
         self.driver.find_element(*self.ipt_name_loc).send_keys(text)
         self.driver.find_element(*self.ck_search_loc).click()
         sleep(1)
-        r = self.driver.find_element(*self.txt_name_msg).text
-        return r
+        return self.driver.find_element(*self.txt_name_msg).text
 
     def verify_modify_function(self):
         """验证 修改功能"""
         self.driver.find_element(*self.ck_modify_loc).click()
         sleep(1)
         self.driver.find_element(*self.ck_save_loc).click()
+        self.driver.refresh()
         return True
 
     def verify_reset_function(self, text):
         """验证 重置功能"""
         self.driver.find_element(*self.ipt_user_number_loc).send_keys(text)
         self.driver.find_element(*self.ck_reset_loc).click()
-        r = self.driver.find_element(*self.ipt_user_number_loc).text
-        return r
+        return self.driver.find_element(*self.ipt_user_number_loc).text

@@ -20,7 +20,7 @@ class ForegotPasswordTest(unittest.TestCase):
         sleep(5)
         self.a.close_broser()
 
-    @BeautifulReport.add_img('001_Foregot_Password_fail')
+    @BeautifulReport.add_img('ForegotTest_001_Foregot_Password_fail')
     def test_001_Foregot_Password_Success(self):
         """
         用例一：修改登陆密码
@@ -33,7 +33,7 @@ class ForegotPasswordTest(unittest.TestCase):
             self.a.input_eamil_code()
             self.assertTrue(self.a.set_login_password(pwd))
         except (BaseException, AssertionError) as msg:
-            self.a.save_img('001_Foregot_Password_fail')
+            self.a.save_img('ForegotTest_001_Foregot_Password_fail')
             InsertLog().debug(msg)
             raise BaseException
 

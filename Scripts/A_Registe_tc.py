@@ -26,9 +26,11 @@ class RegisteTest(unittest.TestCase):
         time.sleep(5)
         self.a.close_broser()
 
-    @BeautifulReport.add_img('001_Register_Fail')
+    @BeautifulReport.add_img('RegisteTest_001_Register_Fail')
     def test_001_Register_Business(self):
+
         """
+        用例一 ：检查注册功能
         :param brandname: 品牌名称
         :param nation:    国家名称
         :param Phone:   手机号码
@@ -54,7 +56,7 @@ class RegisteTest(unittest.TestCase):
             self.a.click_return_login()      # 点击返回登陆
         except (BaseException, AssertionError) as msg:  # BaseException所有异常的基类,AssertionError断言语句失败
             InsertLog().debug(msg)
-            self.a.save_img('001_Register_Fail')
+            self.a.save_img('RegisteTest_001_Register_Fail')
             raise BaseException
 
 

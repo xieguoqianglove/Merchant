@@ -25,14 +25,14 @@ class OrderManagement(Page, Base):
 
     def input_shop_query(self, text):
         """验证 输入方式的门店 查询"""
+        shop_xpath = (By.XPATH, f'//span[contains(.,"{text}")]')
         self.driver.find_element(*self.ck_shop_loc).click()
         self.driver.find_element(*self.ipt_shop_loc).send_keys(text)
-        sleep(1)
-        self.driver.find_element(*self.ck_one_shop_loc).click()
+        sleep(0.5)
+        self.driver.find_element(*shop_xpath).click()
         self.driver.find_element(*self.ck_search_loc).click()
         sleep(1)
-        r = self.driver.find_element(*self.txt_shop_msg).text
-        return r
+        return self.driver.find_element(*self.txt_shop_msg).text
 
     def verify_select_shop_query(self):
         """验证 选择方式的门店 查询 """
@@ -41,8 +41,7 @@ class OrderManagement(Page, Base):
         sleep(1)
         self.driver.find_element(*self.ck_search_loc).click()
         sleep(1)
-        r = self.driver.find_element(*self.txt_shop_msg).text
-        return r
+        return self.driver.find_element(*self.txt_shop_msg).text
 
     def verify_modify_function(self):
         """验证 详情功能"""
@@ -54,12 +53,12 @@ class OrderManagement(Page, Base):
 
     def verify_reset_function(self, text):
         """验证 重置功能"""
+        shop_xpath = (By.XPATH, f'//span[contains(.,"{text}")]')
         self.driver.find_element(*self.ck_shop_loc).click()
         self.driver.find_element(*self.ipt_shop_loc).send_keys(text)
-        sleep(1)
-        self.driver.find_element(*self.ck_one_shop_loc).click()
+        sleep(0.5)
+        self.driver.find_element(*shop_xpath).click()
         self.driver.find_element(*self.ck_search_loc).click()
         sleep(1)
         self.driver.find_element(*self.ck_reset_loc).click()
-        r = self.driver.find_element(*self.ipt_shop_loc).text
-        return r
+        return self.driver.find_element(*self.ipt_shop_loc).text

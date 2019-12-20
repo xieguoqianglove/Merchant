@@ -1,0 +1,724 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="2dba987a-e91d-4112-a764-07b924614ccc" name="Default Changelist" comment="" />
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileEditorManager">
+    <leaf />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/Scripts/A_Login_tc.py" />
+        <option value="$PROJECT_DIR$/README.md" />
+        <option value="$PROJECT_DIR$/PO/LoginRegisterPage/LoginPage.py" />
+        <option value="$PROJECT_DIR$/PO/LoginRegisterPage/RegisterPage.py" />
+        <option value="$PROJECT_DIR$/PO/LoginRegisterPage/ForegotPassword.py" />
+        <option value="$PROJECT_DIR$/Scripts/A_Foregotpwd_tc.py" />
+        <option value="$PROJECT_DIR$/PO/OrderPage/OrderManagementList.py" />
+        <option value="$PROJECT_DIR$/Scripts/B_OrderList_tc.py" />
+        <option value="$PROJECT_DIR$/Scripts/B_ShopList_tc.py" />
+        <option value="$PROJECT_DIR$/Scripts/C_DeviceList_tc.py" />
+        <option value="$PROJECT_DIR$/PO/BasePage.py" />
+        <option value="$PROJECT_DIR$/Scripts/A_Registe_tc.py" />
+        <option value="$PROJECT_DIR$/libs/ShareBusiness.py" />
+        <option value="$PROJECT_DIR$/Scripts/E_DeviceList_tc.py" />
+        <option value="$PROJECT_DIR$/Scripts/F_OrderList_tc.py" />
+        <option value="$PROJECT_DIR$/../Python相关/Selenium定位方法/selenium&amp;id&amp;name&amp;link&amp;tag&amp;class.py" />
+        <option value="$PROJECT_DIR$/PO/DevicePage/DeviceList.py" />
+        <option value="$PROJECT_DIR$/Scripts/D_StaffList_tc.py" />
+        <option value="$PROJECT_DIR$/PO/StaffPage/StaffList.py" />
+        <option value="$PROJECT_DIR$/PO/ReportFormPage/OverviewList.py" />
+        <option value="$PROJECT_DIR$/Scripts/G_ReportList_tc.py" />
+        <option value="$PROJECT_DIR$/Scripts/G_ReportCashList_tc.py" />
+        <option value="$PROJECT_DIR$/Scripts/G_ReportCurrencyList_tc.py" />
+        <option value="$PROJECT_DIR$/PO/ReportFormPage/DigitalCurrencyRecordList.py" />
+        <option value="$PROJECT_DIR$/Scripts/ZPersonalCenterUserList_tc.py" />
+        <option value="$PROJECT_DIR$/PO/Pagetitle.py" />
+        <option value="$PROJECT_DIR$/Scripts/K_UserCenterList_tc.py" />
+        <option value="$PROJECT_DIR$/PO/ShopPage/ShopList.py" />
+        <option value="$PROJECT_DIR$/PO/UserCenterPage/UserCenterList.py" />
+        <option value="$PROJECT_DIR$/libs/test_data.ini" />
+        <option value="$PROJECT_DIR$/PO/HomePage/HomeList.py" />
+        <option value="$PROJECT_DIR$/Scripts/B_HomeList_tc.py" />
+        <option value="$PROJECT_DIR$/Scripts/H_FundsCashierList_tc.py" />
+        <option value="$PROJECT_DIR$/PO/FundsPage/CashierAccountList.py" />
+        <option value="$PROJECT_DIR$/PO/ReportFormPage/OverviewAndCashList.py" />
+        <option value="$PROJECT_DIR$/Scripts/H_FundsSalesList_tc.py" />
+        <option value="$PROJECT_DIR$/PO/FundsPage/SalesAccountList.py" />
+        <option value="$PROJECT_DIR$/libs/ShareModules.py" />
+        <option value="$PROJECT_DIR$/../Python相关/Selenium定位方法/seleniumlianxi/PageObject/LoginPagelagouwang.py" />
+      </list>
+    </option>
+  </component>
+  <component name="ProjectFrameBounds">
+    <option name="x" value="262" />
+    <option name="y" value="79" />
+    <option name="width" value="1910" />
+    <option name="height" value="1155" />
+  </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectView">
+    <navigator proportions="" version="1">
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes>
+      <pane id="ProjectPane" />
+      <pane id="Scope" />
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/Scripts" />
+      <recent name="$PROJECT_DIR$/PO" />
+    </key>
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="RunManager" selected="Python.LoginPagelagouwang">
+    <configuration name="LoginPagelagouwang" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="selenium" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/../Python相关/Selenium定位方法/seleniumlianxi/PageObject" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/../Python相关/Selenium定位方法/seleniumlianxi/PageObject/LoginPagelagouwang.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="Page" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="selenium" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/../Python相关/Selenium定位方法/seleniumlianxi/PageObject" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/../Python相关/Selenium定位方法/seleniumlianxi/PageObject/Page.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="ShareModules" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="Merchant" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/libs" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/libs/ShareModules.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="reodExcel" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="selenium" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/../Python相关/Selenium定位方法/seleniumlianxi/PageObject" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/../Python相关/Selenium定位方法/seleniumlianxi/PageObject/reodExcel.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="Unittests for H_FundsSalesList_tc.AssetsSalesListTest.test_002_Withdrawal_USDT" type="tests" factoryName="Unittests" temporary="true" nameIsGenerated="true">
+      <module name="Merchant" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Scripts" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="_new_additionalArguments" value="&quot;&quot;" />
+      <option name="_new_target" value="&quot;H_FundsSalesList_tc.AssetsSalesListTest.test_002_Withdrawal_USDT&quot;" />
+      <option name="_new_targetType" value="&quot;PYTHON&quot;" />
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Python.LoginPagelagouwang" />
+        <item itemvalue="Python.reodExcel" />
+        <item itemvalue="Python.Page" />
+        <item itemvalue="Python.ShareModules" />
+        <item itemvalue="Python tests.Unittests for H_FundsSalesList_tc.AssetsSalesListTest.test_002_Withdrawal_USDT" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="2dba987a-e91d-4112-a764-07b924614ccc" name="Default Changelist" comment="" />
+      <created>1574911484125</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1574911484125</updated>
+    </task>
+    <task id="LOCAL-00001" summary="更新">
+      <created>1574931562263</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1574931562263</updated>
+    </task>
+    <task id="LOCAL-00002" summary="更新框架元素">
+      <created>1575943423438</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1575943423438</updated>
+    </task>
+    <task id="LOCAL-00003" summary="更新框架元素">
+      <created>1576051098638</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1576051098638</updated>
+    </task>
+    <task id="LOCAL-00004" summary="更新框架元素">
+      <created>1576056928697</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1576056928697</updated>
+    </task>
+    <task id="LOCAL-00005" summary="完善个人中心、资产页面元素">
+      <created>1576231678318</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1576231678318</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
+    <servers />
+  </component>
+  <component name="TestHistory">
+    <history-entry file="Unittests_in_H_FundsCashierList_tc_py - 2019.12.13 at 17h 24m 56s.xml">
+      <configuration name="Unittests in H_FundsCashierList_tc.py" configurationId="tests" />
+    </history-entry>
+    <history-entry file="Unittests_in_H_FundsCashierList_tc_py - 2019.12.13 at 17h 28m 17s.xml">
+      <configuration name="Unittests in H_FundsCashierList_tc.py" configurationId="tests" />
+    </history-entry>
+    <history-entry file="Unittests_for_H_FundsCashierList_tc_AssetsCashierListTest_test_002_Withdrawal_USDT - 2019.12.13 at 17h 28m 40s.xml">
+      <configuration name="Unittests for H_FundsCashierList_tc.AssetsCashierListTest.test_002_Withdrawal_USDT" configurationId="tests" />
+    </history-entry>
+    <history-entry file="Unittests_for_H_FundsCashierList_tc_AssetsCashierListTest_test_002_Withdrawal_USDT - 2019.12.13 at 17h 30m 00s.xml">
+      <configuration name="Unittests for H_FundsCashierList_tc.AssetsCashierListTest.test_002_Withdrawal_USDT" configurationId="tests" />
+    </history-entry>
+    <history-entry file="Unittests_for_H_FundsCashierList_tc_AssetsCashierListTest_test_002_Withdrawal_USDT - 2019.12.13 at 17h 32m 04s.xml">
+      <configuration name="Unittests for H_FundsCashierList_tc.AssetsCashierListTest.test_002_Withdrawal_USDT" configurationId="tests" />
+    </history-entry>
+    <history-entry file="Unittests_for_H_FundsCashierList_tc_AssetsCashierListTest_test_002_Withdrawal_USDT - 2019.12.13 at 17h 33m 42s.xml">
+      <configuration name="Unittests for H_FundsCashierList_tc.AssetsCashierListTest.test_002_Withdrawal_USDT" configurationId="tests" />
+    </history-entry>
+    <history-entry file="Unittests_in_H_FundsSalesList_tc_py - 2019.12.13 at 17h 59m 25s.xml">
+      <configuration name="Unittests in H_FundsSalesList_tc.py" configurationId="tests" />
+    </history-entry>
+    <history-entry file="Unittests_in_H_FundsSalesList_tc_py - 2019.12.13 at 18h 01m 50s.xml">
+      <configuration name="Unittests in H_FundsSalesList_tc.py" configurationId="tests" />
+    </history-entry>
+    <history-entry file="Unittests_for_H_FundsSalesList_tc_AssetsSalesListTest_test_002_Withdrawal_USDT - 2019.12.13 at 18h 03m 52s.xml">
+      <configuration name="Unittests for H_FundsSalesList_tc.AssetsSalesListTest.test_002_Withdrawal_USDT" configurationId="tests" />
+    </history-entry>
+    <history-entry file="Unittests_for_H_FundsSalesList_tc_AssetsSalesListTest_test_002_Withdrawal_USDT - 2019.12.13 at 18h 05m 38s.xml">
+      <configuration name="Unittests for H_FundsSalesList_tc.AssetsSalesListTest.test_002_Withdrawal_USDT" configurationId="tests" />
+    </history-entry>
+  </component>
+  <component name="TodoView" selected-index="1">
+    <todo-panel id="selected-file">
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+    <todo-panel id="all">
+      <are-packages-shown value="true" />
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="262" y="79" width="1910" height="1155" extended-state="0" />
+    <layout>
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.17628375" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info id="Favorites" order="2" side_tool="true" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.3264346" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.4997239" weight="0.25587958" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="6" weight="0.3288201" />
+      <window_info anchor="bottom" id="Version Control" order="7" weight="0.32970297" />
+      <window_info anchor="bottom" id="Terminal" order="8" sideWeight="0.4997239" weight="0.32862523" />
+      <window_info anchor="bottom" id="Event Log" order="9" sideWeight="0.5002761" side_tool="true" weight="0.32862523" />
+      <window_info anchor="bottom" id="Python Console" order="10" weight="0.32862523" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+    </layout>
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="RECENTLY_FILTERED_USER_GROUPS">
+                <collection />
+              </option>
+              <option name="RECENTLY_FILTERED_BRANCH_GROUPS">
+                <collection />
+              </option>
+              <option name="COLUMN_ORDER">
+                <list>
+                  <option value="0" />
+                  <option value="1" />
+                  <option value="2" />
+                  <option value="3" />
+                </list>
+              </option>
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="RECENT_FILTERS">
+      <map>
+        <entry key="Branch">
+          <value>
+            <list />
+          </value>
+        </entry>
+        <entry key="User">
+          <value>
+            <list />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="更新" />
+    <MESSAGE value="更新框架元素" />
+    <MESSAGE value="完善个人中心、资产页面元素" />
+    <option name="LAST_COMMIT_MESSAGE" value="完善个人中心、资产页面元素" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/Scripts/D_StaffList_tc.py</url>
+          <option name="timeStamp" value="2" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/PO/OrderPage/OrderManagementList.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="420">
+          <caret line="20" column="9" lean-forward="true" selection-start-line="20" selection-start-column="9" selection-end-line="20" selection-end-column="9" />
+          <folding>
+            <element signature="e#0#43#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Scripts/A_Foregotpwd_tc.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="168">
+          <caret line="8" column="36" selection-start-line="8" selection-start-column="36" selection-end-line="8" selection-end-column="36" />
+          <folding>
+            <element signature="e#0#22#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/PO/LoginRegisterPage/LoginPage.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="498">
+          <caret line="46" column="16" lean-forward="true" selection-start-line="39" selection-start-column="4" selection-end-line="46" selection-end-column="16" />
+          <folding>
+            <element signature="e#0#22#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../Python相关/Selenium定位方法/selenium&amp;id&amp;name&amp;link&amp;tag&amp;class.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="240">
+          <caret line="14" column="18" selection-start-line="14" selection-start-column="11" selection-end-line="14" selection-end-column="18" />
+          <folding>
+            <element signature="e#2#32#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/img/006_edit_fail.png" />
+    <entry file="file://$PROJECT_DIR$/img/002_add_shop_fail.png" />
+    <entry file="file://$PROJECT_DIR$/log/2019_12_11_11.log" />
+    <entry file="file://$PROJECT_DIR$/PO/DevicePage/DeviceList.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="602">
+          <caret line="33" lean-forward="true" selection-start-line="33" selection-end-line="33" />
+          <folding>
+            <element signature="e#0#43#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/img/008_edit_fail.png" />
+    <entry file="file://$PROJECT_DIR$/img/009_add_account_fail.png" />
+    <entry file="file://$PROJECT_DIR$/PO/ShopPage/__init__.py">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/PO/ReportFormPage/CashRecordList.py" />
+    <entry file="file://$PROJECT_DIR$/Scripts/G_ReportList_tc.py" />
+    <entry file="file://$PROJECT_DIR$/Scripts/A_Login_tc.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="567">
+          <caret line="27" column="11" lean-forward="true" selection-start-line="27" selection-start-column="11" selection-end-line="27" selection-end-column="11" />
+          <folding>
+            <element signature="e#0#22#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Scripts/A_Registe_tc.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="189">
+          <caret line="15" column="32" selection-start-line="15" selection-start-column="22" selection-end-line="15" selection-end-column="32" />
+          <folding>
+            <element signature="e#0#11#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Scripts/D_StaffList_tc.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="147">
+          <caret line="7" column="42" lean-forward="true" selection-start-line="7" selection-start-column="42" selection-end-line="7" selection-end-column="42" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Scripts/E_DeviceList_tc.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="147">
+          <caret line="7" column="43" lean-forward="true" selection-start-line="7" selection-start-column="43" selection-end-line="7" selection-end-column="43" />
+          <folding>
+            <element signature="e#0#22#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Scripts/F_OrderList_tc.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="22" lean-forward="true" selection-start-column="22" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/img/003_input_shop_fail.png" />
+    <entry file="file://$PROJECT_DIR$/../TotalPUN/venv/lib/python3.7/site-packages/selenium/webdriver/remote/errorhandler.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="503">
+          <caret line="241" selection-start-line="241" selection-end-line="241" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/PO/ReportFormPage/DigitalCurrencyRecordList.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="504">
+          <caret line="24" column="79" selection-start-line="24" selection-start-column="79" selection-end-line="24" selection-end-column="79" />
+          <folding>
+            <element signature="e#0#43#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/PO/UserCenterPage/UserInformationList.py" />
+    <entry file="file://$PROJECT_DIR$/PO/StaffPage/StaffList.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="301">
+          <caret line="24" lean-forward="true" selection-start-line="24" selection-end-line="24" />
+          <folding>
+            <element signature="e#0#43#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Scripts/ZPersonalCenterUserList_tc.py" />
+    <entry file="file://$PROJECT_DIR$/Scripts/G_ReportCurrencyList_tc.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="624">
+          <caret line="43" column="53" lean-forward="true" selection-start-line="43" selection-start-column="12" selection-end-line="43" selection-end-column="53" />
+          <folding>
+            <element signature="e#0#22#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/img/001_User_info_fail.png" />
+    <entry file="file://$PROJECT_DIR$/img/002_chang_loginpwd_fail.png" />
+    <entry file="file://$PROJECT_DIR$/PO/Pagetitle.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="367">
+          <caret line="50" selection-start-line="50" selection-end-line="50" />
+          <folding>
+            <element signature="e#0#43#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/PO/ShopPage/ShopList.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1783">
+          <caret line="116" lean-forward="true" selection-start-line="116" selection-end-line="116" />
+          <folding>
+            <element signature="e#0#43#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/PO/UserCenterPage/UserCenterList.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="798">
+          <caret line="43" lean-forward="true" selection-start-line="43" selection-end-line="43" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Scripts/K_UserCenterList_tc.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="414">
+          <caret line="26" column="50" lean-forward="true" selection-start-line="26" selection-start-column="50" selection-end-line="26" selection-end-column="50" />
+          <folding>
+            <element signature="e#0#22#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Scripts/C_StoreList_tc.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="924">
+          <caret line="44" column="45" lean-forward="true" selection-start-line="44" selection-start-column="45" selection-end-line="44" selection-end-column="45" />
+          <folding>
+            <element signature="e#0#22#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Scripts/B_HomeList_tc.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-12">
+          <caret line="7" column="43" selection-start-line="7" selection-start-column="43" selection-end-line="7" selection-end-column="43" />
+          <folding>
+            <element signature="e#1#23#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/PO/HomePage/HomeList.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="567">
+          <caret line="27" column="44" lean-forward="true" selection-start-line="27" selection-start-column="44" selection-end-line="27" selection-end-column="44" />
+          <folding>
+            <element signature="e#0#43#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file:///Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/unittest/case.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="248">
+          <caret line="691" selection-start-line="691" selection-end-line="691" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/PO/BasePage.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="441">
+          <caret line="29" column="30" lean-forward="true" selection-start-line="29" selection-start-column="30" selection-end-line="29" selection-end-column="30" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/PO/LoginRegisterPage/ForegotPassword.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <folding>
+            <element signature="e#0#22#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/PO/ReportFormPage/OverviewAndCashList.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="575">
+          <caret line="70" column="65" lean-forward="true" selection-start-line="70" selection-start-column="65" selection-end-line="70" selection-end-column="65" />
+          <folding>
+            <element signature="e#0#43#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Scripts/H_FundsCashierList_tc.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="743">
+          <caret line="69" column="31" lean-forward="true" selection-start-line="32" selection-start-column="4" selection-end-line="69" selection-end-column="31" />
+          <folding>
+            <element signature="e#0#22#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/libs/test_data.ini">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="534">
+          <caret line="69" column="18" selection-start-line="69" selection-start-column="1" selection-end-line="69" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Scripts/G_ReportCashList_tc.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="848">
+          <caret line="113" lean-forward="true" selection-start-line="88" selection-start-column="3" selection-end-line="113" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/PO/FundsPage/CashierAccountList.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="464">
+          <caret line="51" column="16" lean-forward="true" selection-start-line="51" selection-start-column="16" selection-end-line="51" selection-end-column="16" />
+          <folding>
+            <element signature="e#0#22#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/img/003_funds_withdrawal_dai_fail.png" />
+    <entry file="file://$PROJECT_DIR$/img/002_funds_withdrawal_usdt_fail.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Scripts/H_FundsSalesList_tc.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="486">
+          <caret line="54" column="43" selection-start-line="54" selection-start-column="43" selection-end-line="54" selection-end-column="43" />
+          <folding>
+            <element signature="e#0#22#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/PO/FundsPage/SalesAccountList.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="512">
+          <caret line="70" lean-forward="true" selection-start-line="70" selection-end-line="70" />
+          <folding>
+            <element signature="e#0#43#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/libs/ShareModules.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="622">
+          <caret line="134" column="19" lean-forward="true" selection-start-line="134" selection-start-column="19" selection-end-line="134" selection-end-column="19" />
+          <folding>
+            <element signature="e#15#24#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../Python相关/Selenium定位方法/seleniumlianxi/PageObject/reodExcel.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="966">
+          <caret line="49" column="55" lean-forward="true" selection-start-line="49" selection-start-column="55" selection-end-line="49" selection-end-column="55" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../Python相关/Selenium定位方法/seleniumlianxi/PageObject/LoginPagelagouwang.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="398">
+          <caret line="40" column="17" selection-start-line="40" selection-start-column="12" selection-end-line="40" selection-end-column="17" />
+          <folding>
+            <element signature="e#114#144#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../Python相关/Selenium定位方法/seleniumlianxi/拉勾网投简历.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="189">
+          <caret line="9" column="43" lean-forward="true" selection-start-line="9" selection-start-column="43" selection-end-line="9" selection-end-column="43" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../Python相关/Selenium定位方法/seleniumlianxi/PageObject/Page.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="315">
+          <caret line="15" column="26" lean-forward="true" selection-start-line="15" selection-start-column="26" selection-end-line="15" selection-end-column="26" />
+        </state>
+      </provider>
+    </entry>
+  </component>
+</project>

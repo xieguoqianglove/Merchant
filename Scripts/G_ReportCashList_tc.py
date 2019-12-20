@@ -31,7 +31,7 @@ class ReportCashRecordListTest(unittest.TestCase):
         sleep(1)
         self.c.click_carh_history()
 
-    @BeautifulReport.add_img("001_Overview_page_fail")
+    @BeautifulReport.add_img("ReportCash_001_Overview_page_fail")
     def test_001_Check_Overview_page(self):
         """
         用例一 ：检查概览页面是否正常
@@ -42,11 +42,11 @@ class ReportCashRecordListTest(unittest.TestCase):
             self.c.click_OverviewList()
             self.assertTrue(self.c.get_Cash_msg_txt())
         except (BaseException, AssertionError) as msg:
-            self.c.save_img('001_Overview_page_fail')
+            self.c.save_img('ReportCash_001_Overview_page_fail')
             InsertLog().debug(msg)
             raise BaseException
 
-    @BeautifulReport.add_img("002_Cash_page_fail")
+    @BeautifulReport.add_img("ReportCash_002_Cash_page_fail")
     def test_002_Check_Cash_page(self):
         """
         用例二 ：检查现金记录页面是否正常
@@ -55,11 +55,11 @@ class ReportCashRecordListTest(unittest.TestCase):
             self.CashRecordListBusiness()
             self.assertTrue(self.c.get_carh_history_txt())
         except (BaseException, AssertionError) as msg:
-            self.c.save_img('002_Cash_page_fail')
+            self.c.save_img('ReportCash_002_Cash_page_fail')
             InsertLog().debug(msg)
             raise BaseException
 
-    @BeautifulReport.add_img("003_input_shop_fail")
+    @BeautifulReport.add_img("ReportCash_003_input_shop_fail")
     def test_003_Verify_Input_Shop_Name(self):
         """
         用例三 ：验证现金记录>门店名称使用输入的方式查询
@@ -69,11 +69,11 @@ class ReportCashRecordListTest(unittest.TestCase):
             sleep(1)
             self.assertTrue(self.c.verify_input_shop_query(shop_name))
         except (BaseException, AssertionError) as msg:
-            self.c.save_img('003_input_shop_fail')
+            self.c.save_img('ReportCash_003_input_shop_fail')
             InsertLog().debug(msg)
             raise BaseException
 
-    @BeautifulReport.add_img('004_select_shop_fail')
+    @BeautifulReport.add_img('ReportCash_004_select_shop_fail')
     def test_004_Verify_Select_Shop_name(self):
         """
         用例四 ：验证现金记录>门店名称使用全选的方式查询
@@ -82,11 +82,11 @@ class ReportCashRecordListTest(unittest.TestCase):
             self.CashRecordListBusiness()
             self.assertIn(shop_name, self.c.verify_select_shop_query())
         except (BaseException, AssertionError) as msg:
-            self.c.save_img('004_select_shop_fail')
+            self.c.save_img('ReportCash_004_select_shop_fail')
             InsertLog().debug(msg)
             raise BaseException
 
-    @BeautifulReport.add_img('005_reset_fail')
+    @BeautifulReport.add_img('ReportCash_005_reset_fail')
     def test_005_Verify_Reset(self):
         """
         用例五 ：验证现金记录>重置功能
@@ -95,11 +95,11 @@ class ReportCashRecordListTest(unittest.TestCase):
             self.CashRecordListBusiness()
             self.assertIn('', self.c.verify_reset_function(start_day))  # 重置成功则返回空字符串
         except (BaseException, AssertionError) as msg:
-            self.c.save_img('005_reset_fail')
+            self.c.save_img('ReportCash_005_reset_fail')
             InsertLog().debug(msg)
             raise BaseException
 
-    @BeautifulReport.add_img('006_Day_fail')
+    @BeautifulReport.add_img('ReportCash_006_Day_fail')
     def test_006_Verify_Day_Query(self):
         """
         用例六 ：验证现金记录>日期查询功能
@@ -108,7 +108,7 @@ class ReportCashRecordListTest(unittest.TestCase):
             self.CashRecordListBusiness()
             self.assertIsNotNone(self.c.verify_day_query(start_day,end_day))
         except (BaseException, AssertionError) as msg:
-            self.c.save_img('006_Day_fail')
+            self.c.save_img('ReportCash_006_Day_fail')
             InsertLog().debug(msg)
             raise BaseException
 
