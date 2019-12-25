@@ -17,12 +17,12 @@ def Getdata(title, subtitle):
     filename = os.path.join(cur_path, "test_data.ini")  # 测试数据文件
 
     config.read(filename)  # 读取数据文件
-    if title not in config.sections():
+    if title not in config.sections():  # sections() 得到所有的section，并以列表的形式返回
         print('测试数据文件test_data.ini异常')
-    elif subtitle not in config.options(title):
+    elif subtitle not in config.options(title):  # options(section) 得到该section的所有option
         print('%s配置项目下不存在%s元素，请检查配置文件test_data.ini' % (title, subtitle))
     else:
-        setting = config.get(title, subtitle)
+        setting = config.get(title, subtitle)  # 得到section中option的值，返回为string类型
         return setting
 
 # -------------------------------------------------------------------------------
