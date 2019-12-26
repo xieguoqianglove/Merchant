@@ -29,6 +29,24 @@ class Setting(Page, Base):
     ck_delete_loc = (By.XPATH, "//*[@class='el-table__row commonTableRow']/td[7]/div/button[2]/span")  # 点击删除
     ck_confirm_delete_loc = (By.XPATH, "//*[@class='el-message-box__btns']/button[2]")  # 点击确认删除
 
+    ck_setting_crypto_loc = (By.XPATH, '//*[@class="setting"]/section/aside/ul/li[3]/span')  # 设置结算货币
+    ck_crypto_loc = (By.CSS_SELECTOR, 'input[placeholder="Select a crypto"]')  # 设置结算货币
+
+
+    def setting_crypto(self, crypto):
+        """结算货币切换成DAI"""
+        crypto_xpath = (By.XPATH, f'//span[starts-with(., "{crypto}")]')
+        self.driver.find_element(*self.ck_setting_crypto_loc).click()
+        sleep(0.5)
+        self.driver.find_element(*self.ck_crypto_loc).click()
+        sleep(0.5)
+        self.driver.find_element(*crypto_xpath).click()
+        sleep(0.5)
+        self.driver.find_element(*self.ck_save_loc).click()
+        WebDriverWait(self.driver, 10, 0.5).until(
+            EC.text_to_be_present_in_element(self.get_tips_msg, 'Successfully modified'))
+        return self.driver.find_element(*self.get_tips_msg).text
+
     def click_setting(self):
         """进入设置界面"""
         WebDriverWait(self.driver, 10, 0.5).until(EC.text_to_be_present_in_element(self.txt_time_zone_loc, 'Time zone setting'))

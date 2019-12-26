@@ -13,7 +13,7 @@ service_charge = Getdata('Setting_tc', 'service_charge')
 tax = Getdata('Setting_tc', 'tax')
 
 class SettingPageList(unittest.TestCase):
-    """设置：时区设置、费用管理"""
+    """设置：时区设置、费用管理、结算货币"""
 
     @classmethod
     def setUpClass(self):
@@ -91,6 +91,31 @@ class SettingPageList(unittest.TestCase):
             InsertLog().debug(msg)
             raise BaseException
 
+    @BeautifulReport.add_img("Setting_006_dai_crypto_fail")
+    def test_006_Setting_Crypto_DAI_Page(self):
+        """
+        用例六 ：结算货币切换成DAI
+        """
+        try:
+            self.b.switch_to_SettingPage()
+            self.assertTrue(self.c.setting_crypto('DAI'))
+        except (BaseException, AssertionError) as msg:
+            self.c.save_img('Setting_006_dai_crypto_fail')
+            InsertLog().debug(msg)
+            raise BaseException
+
+    @BeautifulReport.add_img("Setting_007_usdt_crypto_fail")
+    def test_007_Setting_Crypto_USDT_Page(self):
+        """
+        用例七 ：结算货币切换成USDT
+        """
+        try:
+            self.b.switch_to_SettingPage()
+            self.assertTrue(self.c.setting_crypto('USDT'))
+        except (BaseException, AssertionError) as msg:
+            self.c.save_img('Setting_007_usdt_crypto_fail')
+            InsertLog().debug(msg)
+            raise BaseException
 
 if __name__ == '__main__':
     unittest.main(verbosity=2)
