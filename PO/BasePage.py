@@ -167,8 +167,7 @@ class Base:
         num = '0123456789'
         # code = ['+86137', '+86159', '+86188', '+86132']  # 中国
         code = ['4120', '4123', '4124']  # 委内瑞拉
-        mobile = random.choice(code) + ''.join(random.choice(num) for i in range(6))  # 委内瑞拉
-        return mobile
+        return random.choice(code) + ''.join(random.choice(num) for i in range(6))  # 委内瑞拉
 
     def create_email():
         """
@@ -178,8 +177,7 @@ class Base:
 
         num = '0123456789'
         server = '@qq.com', '@163.com'  # 邮箱域名
-        email = ''.join(random.choice(num) for i in range(8)) + random.choice(server)
-        return email
+        return ''.join(random.choice(num) for i in range(8)) + random.choice(server)
 
     def create_address(size=8, chars=string.digits + string.ascii_letters + string.digits):
         """
@@ -199,7 +197,14 @@ class Base:
 
         return ''.join(random.choice(chars) for _ in range(size))
 
+    def create_unicode():
+        """随机生成汉字"""
+        # return chr(random.randint(0x4e00, 0x9fbf) + random.randint(0x4e00, 0x9fbf))
+
+        first_name = ['测', '费', 'test', '管', "蒋", "孟", "陈", "徐", "杨", "沈", "马", "高", "殷", "上官", "钟", "常"]
+        second_name = ['试', '用', 'test', '理', "蒋", "孟", "陈", "徐", "杨", "沈", "马", "高", "殷", "上官", "钟", "常"]
+        return random.choice(first_name) + random.choice(second_name)
 
 if __name__ == '__main__':
 
-    print(Base.create_address(8))
+    print(Base.create_mobile())

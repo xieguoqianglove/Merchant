@@ -21,7 +21,7 @@ class UserCentPasswordList(unittest.TestCase):
 
     @classmethod
     def tearDownClass(self):
-        sleep(20)
+        # sleep(20)
         self.c.close_broser()
 
     @BeautifulReport.add_img("UserCent_001_User_info_fail")

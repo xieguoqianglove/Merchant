@@ -15,6 +15,8 @@ class PageTitle(Page):
     ipt_ReportFormPage_loc = (By.XPATH, '//*[@id="app"]/section/div[1]/div/div[1]/div[2]/ul/li[6]')
     ipt_AssetsPage_loc = (By.XPATH, '//*[@id="app"]/section/div[1]/div/div[1]/div[2]/ul/li[7]/span')
     ipt_User_CenterPage_loc = (By.XPATH, '//*[@id="app"]/section/div[1]/div/div[2]/div[1]/ul')
+    ipt_SettingPage_loc = (By.XPATH, '//*[@id="app"]/section/div[1]/div/div[2]/div[2]')
+
 
     # 操作层
     def switch_to_HomePage(self):
@@ -50,6 +52,11 @@ class PageTitle(Page):
         sleep(1)
         self.driver.find_element(*self.ipt_User_CenterPage_loc).click()
         sleep(1)
+
+    def switch_to_SettingPage(self):
+        """切换到设置页面"""
+        self.driver.find_element(*self.ipt_SettingPage_loc).click()
+
 
     def close_broser(self):
         self.driver.quit()
